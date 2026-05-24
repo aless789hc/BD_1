@@ -10,9 +10,15 @@ namespace BD_1
 {
     public partial class UC_Perfil : UserControl
     {
+        // aqui la fecha de registro la puse
         public UC_Perfil()
         {
             InitializeComponent();
+        }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

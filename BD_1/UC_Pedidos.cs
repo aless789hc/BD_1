@@ -13,6 +13,7 @@ namespace BD_1
         public UC_Pedidos()
         {
             InitializeComponent();
+            tlpFormulario.Visible = false;
         }
         private void LimpiarFormulario()
         {
@@ -21,36 +22,39 @@ namespace BD_1
             cmbFormato.SelectedIndex = 0;
             dtpFecha.Value = DateTime.Now;
         }
-        private void btnAgregar_Click(object sender, EventArgs e)
+
+
+
+        private void btnAgregar_Click_1(object sender, EventArgs e)
         {
-            panel_formulario.Visible = true;
+            tlpFormulario.Visible = true;
             LimpiarFormulario();
         }
 
-        private void btnEditar_Click(object sender, EventArgs e)
+        private void btnEditar_Click_1(object sender, EventArgs e)
         {
             if (dataGridView1.SelectedRows.Count == 0) return;
-            panel_formulario.Visible = true;
+            tlpFormulario.Visible = true;
             //Aqui se cargan los datos del cliente seleccionado en el formulario para editar
         }
 
-        private void btnEliminar_Click(object sender, EventArgs e)
+        private void btnEliminar_Click_1(object sender, EventArgs e)
         {
-            panel_formulario.Visible = false;
+            tlpFormulario.Visible = false;
             // Aquí se elimina el cliente seleccionado
         }
 
-        private void btnGuardar_Click(object sender, EventArgs e)
+        private void btnGuardar_Click_1(object sender, EventArgs e)
         {
             // INSERT o UPDATE según sea agregar o editar
 
-            panel_formulario.Visible = false;
+            tlpFormulario.Visible = false;
             LimpiarFormulario();
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            panel_formulario.Visible = false;
+            tlpFormulario.Visible = false;
             LimpiarFormulario();
         }
     }

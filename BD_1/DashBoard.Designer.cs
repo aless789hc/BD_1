@@ -94,6 +94,7 @@
             btnPedido.Text = "\U0001f6d2 Pedidos";
             btnPedido.TextAlign = ContentAlignment.MiddleLeft;
             btnPedido.UseVisualStyleBackColor = false;
+            btnPedido.Click += btnPedido_Click;
             // 
             // btnSesion
             // 
@@ -198,7 +199,6 @@
             button6.TabIndex = 0;
             button6.Text = "≡";
             button6.UseVisualStyleBackColor = false;
-           
             // 
             // panel_Contenido
             // 
@@ -207,10 +207,6 @@
             panel_Contenido.Name = "panel_Contenido";
             panel_Contenido.Size = new Size(999, 666);
             panel_Contenido.TabIndex = 1;
-            // 
-            // animTimer
-            // 
-            
             // 
             // DashBoard
             // 

@@ -58,13 +58,13 @@
             label5 = new Label();
             nmdHora = new NumericUpDown();
             label6 = new Label();
-            cmbTipo = new ComboBox();
             label8 = new Label();
             txtPrecio = new TextBox();
             label7 = new Label();
             panel1 = new Panel();
             btnCancelar = new Button();
             btnGuardar = new Button();
+            textBox1 = new TextBox();
             tableLayoutPanel2.SuspendLayout();
             tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
@@ -293,11 +293,11 @@
             tlpFormulario.Controls.Add(label5, 0, 3);
             tlpFormulario.Controls.Add(nmdHora, 0, 4);
             tlpFormulario.Controls.Add(label6, 1, 3);
-            tlpFormulario.Controls.Add(cmbTipo, 1, 4);
             tlpFormulario.Controls.Add(label8, 2, 3);
             tlpFormulario.Controls.Add(txtPrecio, 2, 4);
             tlpFormulario.Controls.Add(label7, 0, 5);
             tlpFormulario.Controls.Add(panel1, 2, 7);
+            tlpFormulario.Controls.Add(textBox1, 1, 4);
             tlpFormulario.Dock = DockStyle.Bottom;
             tlpFormulario.Location = new Point(0, 268);
             tlpFormulario.Name = "tlpFormulario";
@@ -425,17 +425,6 @@
             label6.TabIndex = 32;
             label6.Text = "Tipo de sesión";
             // 
-            // cmbTipo
-            // 
-            cmbTipo.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            cmbTipo.Font = new Font("Segoe UI", 9.5F);
-            cmbTipo.FormattingEnabled = true;
-            cmbTipo.Items.AddRange(new object[] { "RETRATO", "BODA", "PRODUCTO", "NATURALEZA", "EVENTO" });
-            cmbTipo.Location = new Point(319, 144);
-            cmbTipo.Name = "cmbTipo";
-            cmbTipo.Size = new Size(290, 29);
-            cmbTipo.TabIndex = 37;
-            // 
             // label8
             // 
             label8.Anchor = AnchorStyles.None;
@@ -505,6 +494,14 @@
             btnGuardar.UseVisualStyleBackColor = false;
             btnGuardar.Click += btnGuardar_Click;
             // 
+            // textBox1
+            // 
+            textBox1.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            textBox1.Location = new Point(319, 145);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(290, 27);
+            textBox1.TabIndex = 43;
+            // 
             // UC_Sesiones
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -556,12 +553,12 @@
         private Label label7;
         private Label label4;
         private Label label6;
-        private ComboBox cmbTipo;
         private TextBox txtPrecio;
         private Label label9;
         private ComboBox cmbFotografo;
         private Panel panel1;
         private Button btnCancelar;
         private Button btnGuardar;
+        private TextBox textBox1;
     }
 }

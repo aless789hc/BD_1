@@ -23,8 +23,8 @@
 
         private void DashBoard_Load(object sender, EventArgs e)
         {
-           /* animTimer.Interval = 10;
-            animTimer.Tick += animTimer_Tick;*/
+            /* animTimer.Interval = 10;
+             animTimer.Tick += animTimer_Tick;*/
             CargarVista(new UC_Inicio());
         }
 
@@ -86,6 +86,11 @@
         private void btnClientes_Click(object sender, EventArgs e)
         {
             CargarVista(new UC_Cliente());
+        }
+
+        private void btnPedido_Click(object sender, EventArgs e)
+        {
+            CargarVista(new UC_Pedidos());
         }
     }
 }

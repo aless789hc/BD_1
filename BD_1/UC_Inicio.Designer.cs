@@ -141,7 +141,7 @@
             label1.FlatStyle = FlatStyle.Popup;
             label1.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(484, 0);
+            label1.Location = new Point(484, 4);
             label1.Name = "label1";
             label1.Size = new Size(156, 25);
             label1.TabIndex = 1;
@@ -283,7 +283,7 @@
             label11.FlatStyle = FlatStyle.Popup;
             label11.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
             label11.ForeColor = Color.White;
-            label11.Location = new Point(192, -1);
+            label11.Location = new Point(190, 4);
             label11.Name = "label11";
             label11.Size = new Size(178, 25);
             label11.TabIndex = 1;
@@ -383,7 +383,7 @@
             label13.FlatStyle = FlatStyle.Popup;
             label13.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
             label13.ForeColor = Color.White;
-            label13.Location = new Point(192, -1);
+            label13.Location = new Point(192, 4);
             label13.Name = "label13";
             label13.Size = new Size(176, 25);
             label13.TabIndex = 1;
