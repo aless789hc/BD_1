@@ -31,6 +31,7 @@
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DashBoard));
             panel_sideBar = new Panel();
+            button1 = new Button();
             button3 = new Button();
             btnPedido = new Button();
             btnSesion = new Button();
@@ -42,6 +43,7 @@
             button6 = new Button();
             panel_Contenido = new Panel();
             animTimer = new System.Windows.Forms.Timer(components);
+            button2 = new Button();
             panel_sideBar.SuspendLayout();
             panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -50,6 +52,8 @@
             // panel_sideBar
             // 
             panel_sideBar.BackColor = Color.FromArgb(50, 13, 162);
+            panel_sideBar.Controls.Add(button2);
+            panel_sideBar.Controls.Add(button1);
             panel_sideBar.Controls.Add(button3);
             panel_sideBar.Controls.Add(btnPedido);
             panel_sideBar.Controls.Add(btnSesion);
@@ -63,6 +67,23 @@
             panel_sideBar.Size = new Size(220, 666);
             panel_sideBar.TabIndex = 0;
             // 
+            // button1
+            // 
+            button1.BackColor = Color.FromArgb(50, 13, 162);
+            button1.Dock = DockStyle.Top;
+            button1.FlatAppearance.BorderSize = 0;
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.Font = new Font("Segoe UI", 13.8F);
+            button1.ForeColor = Color.White;
+            button1.Location = new Point(0, 320);
+            button1.Name = "button1";
+            button1.Size = new Size(220, 45);
+            button1.TabIndex = 20;
+            button1.Text = "⚙️ Administrador";
+            button1.TextAlign = ContentAlignment.MiddleLeft;
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
+            // 
             // button3
             // 
             button3.BackColor = Color.FromArgb(50, 13, 162);
@@ -75,9 +96,10 @@
             button3.Name = "button3";
             button3.Size = new Size(220, 45);
             button3.TabIndex = 19;
-            button3.Text = "⚙️ Administrador";
+            button3.Text = "👤Perfil";
             button3.TextAlign = ContentAlignment.MiddleLeft;
             button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click_1;
             // 
             // btnPedido
             // 
@@ -208,6 +230,23 @@
             panel_Contenido.Size = new Size(999, 666);
             panel_Contenido.TabIndex = 1;
             // 
+            // button2
+            // 
+            button2.BackColor = Color.FromArgb(50, 13, 162);
+            button2.Dock = DockStyle.Top;
+            button2.FlatAppearance.BorderSize = 0;
+            button2.FlatStyle = FlatStyle.Flat;
+            button2.Font = new Font("Segoe UI", 13.8F);
+            button2.ForeColor = Color.White;
+            button2.Location = new Point(0, 365);
+            button2.Name = "button2";
+            button2.Size = new Size(220, 45);
+            button2.TabIndex = 21;
+            button2.Text = "⚙️ Administrador";
+            button2.TextAlign = ContentAlignment.MiddleLeft;
+            button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
+            // 
             // DashBoard
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -240,5 +279,7 @@
         private Button button3;
         private Button btnPedido;
         private Button btnSesion;
+        private Button button1;
+        private Button button2;
     }
 }

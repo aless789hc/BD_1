@@ -33,7 +33,7 @@ namespace BD_1
 
         private void btnEditar_Click_1(object sender, EventArgs e)
         {
-            if (dataGridView1.SelectedRows.Count == 0) return;
+            if (dgvPedidos.SelectedRows.Count == 0) return;
             tlpFormulario.Visible = true;
             //Aqui se cargan los datos del cliente seleccionado en el formulario para editar
         }

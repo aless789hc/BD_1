@@ -2,6 +2,9 @@
 {
     public partial class DashBoard : Form
     {
+        // Hazaaam dependiendo del rol, en cada UC tendras que ocultar ya sea paneles, componentes
+        // y si es tableLayout y quieres ocultar solo una fila
+        // primero ocultas los componentes que no podra ver y luego contraes la fila del tableLayout que quieres ocultar
         private bool sidebarExpanded = true;
         public DashBoard()
         {
@@ -91,6 +94,21 @@
         private void btnPedido_Click(object sender, EventArgs e)
         {
             CargarVista(new UC_Pedidos());
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            CargarVista(new UC_Perfil());
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            CargarVista(new UC_Roles());
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

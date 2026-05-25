@@ -28,16 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             tableLayoutPanel2 = new TableLayoutPanel();
-            textBox2 = new TextBox();
+            txtBuscar = new TextBox();
             btnAgregar = new Button();
             btnEliminar = new Button();
             btnEditar = new Button();
             tableLayoutPanel1 = new TableLayoutPanel();
             label1 = new Label();
-            dataGridView1 = new DataGridView();
+            dgvSesiones = new DataGridView();
             id = new DataGridViewTextBoxColumn();
             fecha = new DataGridViewTextBoxColumn();
             tipo = new DataGridViewTextBoxColumn();
@@ -64,10 +64,10 @@
             panel1 = new Panel();
             btnCancelar = new Button();
             btnGuardar = new Button();
-            textBox1 = new TextBox();
+            txtTipo = new TextBox();
             tableLayoutPanel2.SuspendLayout();
             tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvSesiones).BeginInit();
             tlpFormulario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)nmdHora).BeginInit();
             panel1.SuspendLayout();
@@ -80,7 +80,7 @@
             tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 191F));
             tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 138F));
             tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 118F));
-            tableLayoutPanel2.Controls.Add(textBox2, 0, 0);
+            tableLayoutPanel2.Controls.Add(txtBuscar, 0, 0);
             tableLayoutPanel2.Controls.Add(btnAgregar, 1, 0);
             tableLayoutPanel2.Controls.Add(btnEliminar, 3, 0);
             tableLayoutPanel2.Controls.Add(btnEditar, 2, 0);
@@ -93,17 +93,17 @@
             tableLayoutPanel2.Size = new Size(930, 59);
             tableLayoutPanel2.TabIndex = 17;
             // 
-            // textBox2
+            // txtBuscar
             // 
-            textBox2.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            textBox2.Font = new Font("Segoe UI", 9.5F);
-            textBox2.Location = new Point(35, 15);
-            textBox2.Margin = new Padding(30, 3, 20, 3);
-            textBox2.Name = "textBox2";
-            textBox2.PlaceholderText = "Buscar por nombre";
-            textBox2.Size = new Size(423, 29);
-            textBox2.TabIndex = 2;
-            textBox2.Tag = "";
+            txtBuscar.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            txtBuscar.Font = new Font("Segoe UI", 9.5F);
+            txtBuscar.Location = new Point(35, 15);
+            txtBuscar.Margin = new Padding(30, 3, 20, 3);
+            txtBuscar.Name = "txtBuscar";
+            txtBuscar.PlaceholderText = "Buscar por nombre";
+            txtBuscar.Size = new Size(423, 29);
+            txtBuscar.TabIndex = 2;
+            txtBuscar.Tag = "";
             // 
             // btnAgregar
             // 
@@ -174,39 +174,39 @@
             label1.Text = "Sesiones";
             label1.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // dataGridView1
+            // dgvSesiones
             // 
-            dataGridView1.AllowUserToAddRows = false;
-            dataGridView1.AllowUserToDeleteRows = false;
-            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridView1.BackgroundColor = Color.White;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = SystemColors.Control;
-            dataGridViewCellStyle1.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { id, fecha, tipo, cliente, fotografo, horas, precio, estado });
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = SystemColors.Window;
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9.5F);
-            dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
-            dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
-            dataGridView1.Dock = DockStyle.Fill;
-            dataGridView1.GridColor = Color.FromArgb(227, 230, 245);
-            dataGridView1.Location = new Point(0, 116);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.ReadOnly = true;
-            dataGridView1.RowHeadersVisible = false;
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(930, 152);
-            dataGridView1.TabIndex = 19;
+            dgvSesiones.AllowUserToAddRows = false;
+            dgvSesiones.AllowUserToDeleteRows = false;
+            dgvSesiones.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvSesiones.BackgroundColor = Color.White;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = SystemColors.Control;
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle3.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
+            dgvSesiones.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dgvSesiones.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvSesiones.Columns.AddRange(new DataGridViewColumn[] { id, fecha, tipo, cliente, fotografo, horas, precio, estado });
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = SystemColors.Window;
+            dataGridViewCellStyle4.Font = new Font("Segoe UI", 9.5F);
+            dataGridViewCellStyle4.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.False;
+            dgvSesiones.DefaultCellStyle = dataGridViewCellStyle4;
+            dgvSesiones.Dock = DockStyle.Fill;
+            dgvSesiones.GridColor = Color.FromArgb(227, 230, 245);
+            dgvSesiones.Location = new Point(0, 116);
+            dgvSesiones.Name = "dgvSesiones";
+            dgvSesiones.ReadOnly = true;
+            dgvSesiones.RowHeadersVisible = false;
+            dgvSesiones.RowHeadersWidth = 51;
+            dgvSesiones.Size = new Size(930, 152);
+            dgvSesiones.TabIndex = 19;
             // 
             // id
             // 
@@ -297,7 +297,7 @@
             tlpFormulario.Controls.Add(txtPrecio, 2, 4);
             tlpFormulario.Controls.Add(label7, 0, 5);
             tlpFormulario.Controls.Add(panel1, 2, 7);
-            tlpFormulario.Controls.Add(textBox1, 1, 4);
+            tlpFormulario.Controls.Add(txtTipo, 1, 4);
             tlpFormulario.Dock = DockStyle.Bottom;
             tlpFormulario.Location = new Point(0, 268);
             tlpFormulario.Name = "tlpFormulario";
@@ -494,19 +494,19 @@
             btnGuardar.UseVisualStyleBackColor = false;
             btnGuardar.Click += btnGuardar_Click;
             // 
-            // textBox1
+            // txtTipo
             // 
-            textBox1.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            textBox1.Location = new Point(319, 145);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(290, 27);
-            textBox1.TabIndex = 43;
+            txtTipo.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            txtTipo.Location = new Point(319, 145);
+            txtTipo.Name = "txtTipo";
+            txtTipo.Size = new Size(290, 27);
+            txtTipo.TabIndex = 43;
             // 
             // UC_Sesiones
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(dataGridView1);
+            Controls.Add(dgvSesiones);
             Controls.Add(tlpFormulario);
             Controls.Add(tableLayoutPanel2);
             Controls.Add(tableLayoutPanel1);
@@ -516,7 +516,7 @@
             tableLayoutPanel2.PerformLayout();
             tableLayoutPanel1.ResumeLayout(false);
             tableLayoutPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvSesiones).EndInit();
             tlpFormulario.ResumeLayout(false);
             tlpFormulario.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)nmdHora).EndInit();
@@ -526,13 +526,13 @@
 
         #endregion
         private TableLayoutPanel tableLayoutPanel2;
-        private TextBox textBox2;
+        private TextBox txtBuscar;
         private Button btnAgregar;
         private Button btnEliminar;
         private Button btnEditar;
         private TableLayoutPanel tableLayoutPanel1;
         private Label label1;
-        private DataGridView dataGridView1;
+        private DataGridView dgvSesiones;
         private DataGridViewTextBoxColumn id;
         private DataGridViewTextBoxColumn fecha;
         private DataGridViewTextBoxColumn tipo;
@@ -559,6 +559,6 @@
         private Panel panel1;
         private Button btnCancelar;
         private Button btnGuardar;
-        private TextBox textBox1;
+        private TextBox txtTipo;
     }
 }

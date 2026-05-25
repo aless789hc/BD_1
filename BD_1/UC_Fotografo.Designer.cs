@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             tlpFormulario = new TableLayoutPanel();
             label2 = new Label();
             label5 = new Label();
@@ -46,14 +46,14 @@
             label6 = new Label();
             txtTelefono = new TextBox();
             tableLayoutPanel2 = new TableLayoutPanel();
-            textBox2 = new TextBox();
+            txtBuscar = new TextBox();
             btnBuscar = new Button();
             btnAgregar = new Button();
             btnEliminar = new Button();
             btnEditar = new Button();
             tableLayoutPanel1 = new TableLayoutPanel();
             label1 = new Label();
-            dataGridView1 = new DataGridView();
+            dgvFotografos = new DataGridView();
             id = new DataGridViewTextBoxColumn();
             nombre = new DataGridViewTextBoxColumn();
             apPat = new DataGridViewTextBoxColumn();
@@ -64,7 +64,7 @@
             panel1.SuspendLayout();
             tableLayoutPanel2.SuspendLayout();
             tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvFotografos).BeginInit();
             SuspendLayout();
             // 
             // tlpFormulario
@@ -264,7 +264,7 @@
             tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 138F));
             tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 118F));
             tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 126F));
-            tableLayoutPanel2.Controls.Add(textBox2, 0, 0);
+            tableLayoutPanel2.Controls.Add(txtBuscar, 0, 0);
             tableLayoutPanel2.Controls.Add(btnBuscar, 1, 0);
             tableLayoutPanel2.Controls.Add(btnAgregar, 2, 0);
             tableLayoutPanel2.Controls.Add(btnEliminar, 4, 0);
@@ -277,17 +277,17 @@
             tableLayoutPanel2.Size = new Size(938, 59);
             tableLayoutPanel2.TabIndex = 12;
             // 
-            // textBox2
+            // txtBuscar
             // 
-            textBox2.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            textBox2.Font = new Font("Segoe UI", 9.5F);
-            textBox2.Location = new Point(30, 15);
-            textBox2.Margin = new Padding(30, 3, 20, 3);
-            textBox2.Name = "textBox2";
-            textBox2.PlaceholderText = "Buscar por nombre";
-            textBox2.Size = new Size(376, 29);
-            textBox2.TabIndex = 2;
-            textBox2.Tag = "";
+            txtBuscar.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            txtBuscar.Font = new Font("Segoe UI", 9.5F);
+            txtBuscar.Location = new Point(30, 15);
+            txtBuscar.Margin = new Padding(30, 3, 20, 3);
+            txtBuscar.Name = "txtBuscar";
+            txtBuscar.PlaceholderText = "Buscar por nombre";
+            txtBuscar.Size = new Size(376, 29);
+            txtBuscar.TabIndex = 2;
+            txtBuscar.Tag = "";
             // 
             // btnBuscar
             // 
@@ -371,39 +371,39 @@
             label1.Text = "Fotógrafo";
             label1.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // dataGridView1
+            // dgvFotografos
             // 
-            dataGridView1.AllowUserToAddRows = false;
-            dataGridView1.AllowUserToDeleteRows = false;
-            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridView1.BackgroundColor = Color.White;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = SystemColors.Control;
-            dataGridViewCellStyle1.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { id, nombre, apPat, apMat, telefono, especialidad });
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = SystemColors.Window;
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9.5F);
-            dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
-            dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
-            dataGridView1.Dock = DockStyle.Fill;
-            dataGridView1.GridColor = Color.FromArgb(227, 230, 245);
-            dataGridView1.Location = new Point(0, 116);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.ReadOnly = true;
-            dataGridView1.RowHeadersVisible = false;
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(938, 207);
-            dataGridView1.TabIndex = 15;
+            dgvFotografos.AllowUserToAddRows = false;
+            dgvFotografos.AllowUserToDeleteRows = false;
+            dgvFotografos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvFotografos.BackgroundColor = Color.White;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = SystemColors.Control;
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle3.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
+            dgvFotografos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dgvFotografos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvFotografos.Columns.AddRange(new DataGridViewColumn[] { id, nombre, apPat, apMat, telefono, especialidad });
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = SystemColors.Window;
+            dataGridViewCellStyle4.Font = new Font("Segoe UI", 9.5F);
+            dataGridViewCellStyle4.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.False;
+            dgvFotografos.DefaultCellStyle = dataGridViewCellStyle4;
+            dgvFotografos.Dock = DockStyle.Fill;
+            dgvFotografos.GridColor = Color.FromArgb(227, 230, 245);
+            dgvFotografos.Location = new Point(0, 116);
+            dgvFotografos.Name = "dgvFotografos";
+            dgvFotografos.ReadOnly = true;
+            dgvFotografos.RowHeadersVisible = false;
+            dgvFotografos.RowHeadersWidth = 51;
+            dgvFotografos.Size = new Size(938, 207);
+            dgvFotografos.TabIndex = 15;
             // 
             // id
             // 
@@ -457,7 +457,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(dataGridView1);
+            Controls.Add(dgvFotografos);
             Controls.Add(tlpFormulario);
             Controls.Add(tableLayoutPanel2);
             Controls.Add(tableLayoutPanel1);
@@ -470,7 +470,7 @@
             tableLayoutPanel2.PerformLayout();
             tableLayoutPanel1.ResumeLayout(false);
             tableLayoutPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvFotografos).EndInit();
             ResumeLayout(false);
         }
 
@@ -491,14 +491,14 @@
         private Button btnCancelar;
         private Button btnGuardar;
         private TableLayoutPanel tableLayoutPanel2;
-        private TextBox textBox2;
+        private TextBox txtBuscar;
         private Button btnBuscar;
         private Button btnAgregar;
         private Button btnEliminar;
         private Button btnEditar;
         private TableLayoutPanel tableLayoutPanel1;
         private Label label1;
-        private DataGridView dataGridView1;
+        private DataGridView dgvFotografos;
         private DataGridViewTextBoxColumn id;
         private DataGridViewTextBoxColumn nombre;
         private DataGridViewTextBoxColumn apPat;

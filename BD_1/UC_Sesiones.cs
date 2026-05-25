@@ -11,7 +11,7 @@
         {
             cmbCliente.Items.Clear();
             cmbFotografo.Items.Clear();
-            cmbTipo.Items.Clear();
+            txtTipo.Text = "";
             nmdHora.Value = 1;
             txtPrecio.Text = "";
             cmbEstado.SelectedIndex = 0;
@@ -28,7 +28,7 @@
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            if (dataGridView1.SelectedRows.Count == 0) return;
+            if (dgvSesiones.SelectedRows.Count == 0) return;
             tlpFormulario.Visible = true;
             //Aqui se cargan los datos del cliente seleccionado en el formulario para editar
         }

@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             tlpFormulario = new TableLayoutPanel();
             label3 = new Label();
             label2 = new Label();
@@ -39,18 +39,18 @@
             cmbIDSesion = new ComboBox();
             nmdCantidad = new NumericUpDown();
             label5 = new Label();
-            cmbFormato = new ComboBox();
             panel1 = new Panel();
             btnCancelar = new Button();
             btnGuardar = new Button();
+            cmbFormato = new ComboBox();
             tableLayoutPanel2 = new TableLayoutPanel();
-            textBox2 = new TextBox();
+            txtBuscar = new TextBox();
             btnAgregar = new Button();
             btnEliminar = new Button();
             btnEditar = new Button();
             tableLayoutPanel1 = new TableLayoutPanel();
             label1 = new Label();
-            dataGridView1 = new DataGridView();
+            dgvPedidos = new DataGridView();
             ped_id_pedido = new DataGridViewTextBoxColumn();
             sf_id_sesion = new DataGridViewTextBoxColumn();
             ped_formato_entrega = new DataGridViewTextBoxColumn();
@@ -61,16 +61,16 @@
             panel1.SuspendLayout();
             tableLayoutPanel2.SuspendLayout();
             tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvPedidos).BeginInit();
             SuspendLayout();
             // 
             // tlpFormulario
             // 
             tlpFormulario.BackColor = Color.FromArgb(227, 230, 245);
-            tlpFormulario.ColumnCount = 2;
-            tlpFormulario.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 33.3333321F));
-            tlpFormulario.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 33.3333321F));
-            tlpFormulario.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 20F));
+            tlpFormulario.ColumnCount = 3;
+            tlpFormulario.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 40F));
+            tlpFormulario.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 33.760685F));
+            tlpFormulario.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 26.2820511F));
             tlpFormulario.Controls.Add(label3, 1, 1);
             tlpFormulario.Controls.Add(label2, 0, 0);
             tlpFormulario.Controls.Add(label4, 0, 3);
@@ -79,12 +79,12 @@
             tlpFormulario.Controls.Add(cmbIDSesion, 0, 2);
             tlpFormulario.Controls.Add(nmdCantidad, 1, 4);
             tlpFormulario.Controls.Add(label5, 1, 3);
+            tlpFormulario.Controls.Add(panel1, 2, 5);
             tlpFormulario.Controls.Add(cmbFormato, 1, 2);
-            tlpFormulario.Controls.Add(panel1, 1, 5);
             tlpFormulario.Dock = DockStyle.Bottom;
             tlpFormulario.Location = new Point(0, 287);
             tlpFormulario.Name = "tlpFormulario";
-            tlpFormulario.Padding = new Padding(20);
+            tlpFormulario.Padding = new Padding(20, 10, 20, 10);
             tlpFormulario.RowCount = 6;
             tlpFormulario.RowStyles.Add(new RowStyle(SizeType.Percent, 38.57143F));
             tlpFormulario.RowStyles.Add(new RowStyle(SizeType.Percent, 61.42857F));
@@ -92,7 +92,6 @@
             tlpFormulario.RowStyles.Add(new RowStyle(SizeType.Absolute, 37F));
             tlpFormulario.RowStyles.Add(new RowStyle(SizeType.Absolute, 39F));
             tlpFormulario.RowStyles.Add(new RowStyle(SizeType.Absolute, 54F));
-            tlpFormulario.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
             tlpFormulario.Size = new Size(976, 265);
             tlpFormulario.TabIndex = 22;
             // 
@@ -101,7 +100,8 @@
             label3.Anchor = AnchorStyles.None;
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 10.2F);
-            label3.Location = new Point(641, 48);
+            label3.Location = new Point(470, 52);
+            label3.Margin = new Padding(10);
             label3.Name = "label3";
             label3.Size = new Size(162, 23);
             label3.TabIndex = 27;
@@ -111,9 +111,9 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.Location = new Point(23, 20);
+            label2.Location = new Point(23, 10);
             label2.Name = "label2";
-            label2.Size = new Size(219, 22);
+            label2.Size = new Size(219, 25);
             label2.TabIndex = 1;
             label2.Text = "📦 Datos de los pedidos";
             // 
@@ -122,7 +122,8 @@
             label4.Anchor = AnchorStyles.None;
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 10.2F);
-            label4.Location = new Point(183, 121);
+            label4.Location = new Point(174, 131);
+            label4.Margin = new Padding(80, 0, 3, 0);
             label4.Name = "label4";
             label4.Size = new Size(142, 23);
             label4.TabIndex = 29;
@@ -130,11 +131,12 @@
             // 
             // dtpFecha
             // 
-            dtpFecha.Anchor = AnchorStyles.None;
+            dtpFecha.Anchor = AnchorStyles.Left | AnchorStyles.Right;
             dtpFecha.Font = new Font("Segoe UI", 9.5F);
-            dtpFecha.Location = new Point(98, 156);
+            dtpFecha.Location = new Point(100, 166);
+            dtpFecha.Margin = new Padding(80, 3, 3, 3);
             dtpFecha.Name = "dtpFecha";
-            dtpFecha.Size = new Size(311, 29);
+            dtpFecha.Size = new Size(291, 29);
             dtpFecha.TabIndex = 28;
             // 
             // label8
@@ -142,7 +144,8 @@
             label8.Anchor = AnchorStyles.None;
             label8.AutoSize = true;
             label8.Font = new Font("Segoe UI", 10.2F);
-            label8.Location = new Point(224, 48);
+            label8.Location = new Point(216, 52);
+            label8.Margin = new Padding(80, 0, 3, 0);
             label8.Name = "label8";
             label8.Size = new Size(59, 23);
             label8.TabIndex = 25;
@@ -150,21 +153,23 @@
             // 
             // cmbIDSesion
             // 
-            cmbIDSesion.Anchor = AnchorStyles.None;
+            cmbIDSesion.Anchor = AnchorStyles.Left | AnchorStyles.Right;
             cmbIDSesion.Font = new Font("Segoe UI", 9.5F);
             cmbIDSesion.FormattingEnabled = true;
-            cmbIDSesion.Location = new Point(128, 81);
+            cmbIDSesion.Location = new Point(100, 91);
+            cmbIDSesion.Margin = new Padding(80, 3, 3, 3);
             cmbIDSesion.Name = "cmbIDSesion";
-            cmbIDSesion.Size = new Size(252, 29);
+            cmbIDSesion.Size = new Size(291, 29);
             cmbIDSesion.TabIndex = 24;
             // 
             // nmdCantidad
             // 
-            nmdCantidad.Anchor = AnchorStyles.None;
+            nmdCantidad.Anchor = AnchorStyles.Left | AnchorStyles.Right;
             nmdCantidad.Font = new Font("Segoe UI", 9.5F);
-            nmdCantidad.Location = new Point(647, 156);
+            nmdCantidad.Location = new Point(404, 166);
+            nmdCantidad.Margin = new Padding(10, 0, 10, 0);
             nmdCantidad.Name = "nmdCantidad";
-            nmdCantidad.Size = new Size(150, 29);
+            nmdCantidad.Size = new Size(295, 29);
             nmdCantidad.TabIndex = 31;
             nmdCantidad.TextAlign = HorizontalAlignment.Center;
             // 
@@ -173,31 +178,20 @@
             label5.Anchor = AnchorStyles.None;
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 10.2F);
-            label5.Location = new Point(682, 121);
+            label5.Location = new Point(512, 131);
+            label5.Margin = new Padding(10, 0, 10, 0);
             label5.Name = "label5";
             label5.Size = new Size(79, 23);
             label5.TabIndex = 30;
             label5.Text = "Cantidad";
             // 
-            // cmbFormato
-            // 
-            cmbFormato.Anchor = AnchorStyles.None;
-            cmbFormato.Font = new Font("Segoe UI", 9.5F);
-            cmbFormato.FormattingEnabled = true;
-            cmbFormato.Items.AddRange(new object[] { "OPALINA", "DIGITAL", "ALBUM", "IMPRESION" });
-            cmbFormato.Location = new Point(598, 81);
-            cmbFormato.Name = "cmbFormato";
-            cmbFormato.Size = new Size(247, 29);
-            cmbFormato.TabIndex = 26;
-            // 
             // panel1
             // 
             panel1.Controls.Add(btnCancelar);
             panel1.Controls.Add(btnGuardar);
-            panel1.Dock = DockStyle.Fill;
-            panel1.Location = new Point(491, 193);
+            panel1.Location = new Point(712, 203);
             panel1.Name = "panel1";
-            panel1.Size = new Size(462, 49);
+            panel1.Size = new Size(241, 49);
             panel1.TabIndex = 42;
             // 
             // btnCancelar
@@ -206,7 +200,7 @@
             btnCancelar.FlatStyle = FlatStyle.Flat;
             btnCancelar.Font = new Font("Segoe UI", 9.5F, FontStyle.Bold);
             btnCancelar.ForeColor = SystemColors.ActiveCaptionText;
-            btnCancelar.Location = new Point(199, 8);
+            btnCancelar.Location = new Point(3, 5);
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(112, 41);
             btnCancelar.TabIndex = 14;
@@ -220,13 +214,25 @@
             btnGuardar.FlatStyle = FlatStyle.Flat;
             btnGuardar.Font = new Font("Segoe UI", 9.5F, FontStyle.Bold);
             btnGuardar.ForeColor = Color.White;
-            btnGuardar.Location = new Point(355, 8);
+            btnGuardar.Location = new Point(121, 5);
             btnGuardar.Name = "btnGuardar";
             btnGuardar.Size = new Size(104, 41);
             btnGuardar.TabIndex = 13;
             btnGuardar.Text = "Guardar";
             btnGuardar.UseVisualStyleBackColor = false;
             btnGuardar.Click += btnGuardar_Click_1;
+            // 
+            // cmbFormato
+            // 
+            cmbFormato.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            cmbFormato.Font = new Font("Segoe UI", 9.5F);
+            cmbFormato.FormattingEnabled = true;
+            cmbFormato.Items.AddRange(new object[] { "OPALINA", "DIGITAL", "ALBUM", "IMPRESION" });
+            cmbFormato.Location = new Point(404, 91);
+            cmbFormato.Margin = new Padding(10, 0, 10, 0);
+            cmbFormato.Name = "cmbFormato";
+            cmbFormato.Size = new Size(295, 29);
+            cmbFormato.TabIndex = 26;
             // 
             // tableLayoutPanel2
             // 
@@ -235,7 +241,7 @@
             tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 191F));
             tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 138F));
             tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 118F));
-            tableLayoutPanel2.Controls.Add(textBox2, 0, 0);
+            tableLayoutPanel2.Controls.Add(txtBuscar, 0, 0);
             tableLayoutPanel2.Controls.Add(btnAgregar, 1, 0);
             tableLayoutPanel2.Controls.Add(btnEliminar, 3, 0);
             tableLayoutPanel2.Controls.Add(btnEditar, 2, 0);
@@ -248,17 +254,17 @@
             tableLayoutPanel2.Size = new Size(976, 59);
             tableLayoutPanel2.TabIndex = 21;
             // 
-            // textBox2
+            // txtBuscar
             // 
-            textBox2.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            textBox2.Font = new Font("Segoe UI", 9.5F);
-            textBox2.Location = new Point(35, 15);
-            textBox2.Margin = new Padding(30, 3, 20, 3);
-            textBox2.Name = "textBox2";
-            textBox2.PlaceholderText = "Buscar por nombre";
-            textBox2.Size = new Size(469, 29);
-            textBox2.TabIndex = 2;
-            textBox2.Tag = "";
+            txtBuscar.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            txtBuscar.Font = new Font("Segoe UI", 9.5F);
+            txtBuscar.Location = new Point(35, 15);
+            txtBuscar.Margin = new Padding(30, 3, 20, 3);
+            txtBuscar.Name = "txtBuscar";
+            txtBuscar.PlaceholderText = "Buscar por nombre";
+            txtBuscar.Size = new Size(469, 29);
+            txtBuscar.TabIndex = 2;
+            txtBuscar.Tag = "";
             // 
             // btnAgregar
             // 
@@ -329,39 +335,39 @@
             label1.Text = "Pedidos";
             label1.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // dataGridView1
+            // dgvPedidos
             // 
-            dataGridView1.AllowUserToAddRows = false;
-            dataGridView1.AllowUserToDeleteRows = false;
-            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridView1.BackgroundColor = Color.White;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = SystemColors.Control;
-            dataGridViewCellStyle1.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
-            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { ped_id_pedido, sf_id_sesion, ped_formato_entrega, ped_fecha_entrega, ped_cantidad });
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = SystemColors.Window;
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9.5F);
-            dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
-            dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
-            dataGridView1.Dock = DockStyle.Fill;
-            dataGridView1.GridColor = Color.FromArgb(227, 230, 245);
-            dataGridView1.Location = new Point(0, 116);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.ReadOnly = true;
-            dataGridView1.RowHeadersVisible = false;
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(976, 171);
-            dataGridView1.TabIndex = 23;
+            dgvPedidos.AllowUserToAddRows = false;
+            dgvPedidos.AllowUserToDeleteRows = false;
+            dgvPedidos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvPedidos.BackgroundColor = Color.White;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = SystemColors.Control;
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            dataGridViewCellStyle3.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
+            dgvPedidos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dgvPedidos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvPedidos.Columns.AddRange(new DataGridViewColumn[] { ped_id_pedido, sf_id_sesion, ped_formato_entrega, ped_fecha_entrega, ped_cantidad });
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = SystemColors.Window;
+            dataGridViewCellStyle4.Font = new Font("Segoe UI", 9.5F);
+            dataGridViewCellStyle4.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.False;
+            dgvPedidos.DefaultCellStyle = dataGridViewCellStyle4;
+            dgvPedidos.Dock = DockStyle.Fill;
+            dgvPedidos.GridColor = Color.FromArgb(227, 230, 245);
+            dgvPedidos.Location = new Point(0, 116);
+            dgvPedidos.Name = "dgvPedidos";
+            dgvPedidos.ReadOnly = true;
+            dgvPedidos.RowHeadersVisible = false;
+            dgvPedidos.RowHeadersWidth = 51;
+            dgvPedidos.Size = new Size(976, 171);
+            dgvPedidos.TabIndex = 23;
             // 
             // ped_id_pedido
             // 
@@ -407,7 +413,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(dataGridView1);
+            Controls.Add(dgvPedidos);
             Controls.Add(tlpFormulario);
             Controls.Add(tableLayoutPanel2);
             Controls.Add(tableLayoutPanel1);
@@ -421,7 +427,7 @@
             tableLayoutPanel2.PerformLayout();
             tableLayoutPanel1.ResumeLayout(false);
             tableLayoutPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvPedidos).EndInit();
             ResumeLayout(false);
         }
 
@@ -437,13 +443,13 @@
         private Button btnCancelar;
         private Button btnGuardar;
         private TableLayoutPanel tableLayoutPanel2;
-        private TextBox textBox2;
+        private TextBox txtBuscar;
         private Button btnAgregar;
         private Button btnEliminar;
         private Button btnEditar;
         private TableLayoutPanel tableLayoutPanel1;
         private Label label1;
-        private DataGridView dataGridView1;
+        private DataGridView dgvPedidos;
         private DataGridViewTextBoxColumn ped_id_pedido;
         private DataGridViewTextBoxColumn sf_id_sesion;
         private DataGridViewTextBoxColumn ped_formato_entrega;
