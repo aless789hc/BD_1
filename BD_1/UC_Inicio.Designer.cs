@@ -35,6 +35,9 @@
             DataGridViewCellStyle dataGridViewCellStyle11 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle12 = new DataGridViewCellStyle();
             tableLayoutPanel1 = new TableLayoutPanel();
+            panel8 = new Panel();
+            btnCancelar = new Button();
+            btnGuardar = new Button();
             tableLayoutPanel3 = new TableLayoutPanel();
             panel7 = new Panel();
             label1 = new Label();
@@ -73,6 +76,7 @@
             lblIngresos = new Label();
             label9 = new Label();
             tableLayoutPanel1.SuspendLayout();
+            panel8.SuspendLayout();
             tableLayoutPanel3.SuspendLayout();
             panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvPedidos).BeginInit();
@@ -94,18 +98,57 @@
             // 
             tableLayoutPanel1.ColumnCount = 1;
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+            tableLayoutPanel1.Controls.Add(panel8, 0, 3);
             tableLayoutPanel1.Controls.Add(tableLayoutPanel3, 0, 2);
             tableLayoutPanel1.Controls.Add(tableLayoutPanel2, 0, 1);
             tableLayoutPanel1.Controls.Add(tableLayoutPanel4, 0, 0);
             tableLayoutPanel1.Dock = DockStyle.Fill;
             tableLayoutPanel1.Location = new Point(0, 0);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
-            tableLayoutPanel1.RowCount = 3;
+            tableLayoutPanel1.RowCount = 4;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 146F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 48.90511F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 51.09489F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 57F));
             tableLayoutPanel1.Size = new Size(1150, 666);
             tableLayoutPanel1.TabIndex = 3;
+            // 
+            // panel8
+            // 
+            panel8.Controls.Add(btnCancelar);
+            panel8.Controls.Add(btnGuardar);
+            panel8.Dock = DockStyle.Fill;
+            panel8.Location = new Point(3, 611);
+            panel8.Margin = new Padding(3, 3, 50, 3);
+            panel8.Name = "panel8";
+            panel8.Size = new Size(1097, 52);
+            panel8.TabIndex = 43;
+            // 
+            // btnCancelar
+            // 
+            btnCancelar.BackColor = Color.FromArgb(227, 230, 245);
+            btnCancelar.FlatStyle = FlatStyle.Flat;
+            btnCancelar.Font = new Font("Segoe UI", 9.5F, FontStyle.Bold);
+            btnCancelar.ForeColor = SystemColors.ActiveCaptionText;
+            btnCancelar.Location = new Point(703, 3);
+            btnCancelar.Name = "btnCancelar";
+            btnCancelar.Size = new Size(202, 41);
+            btnCancelar.TabIndex = 14;
+            btnCancelar.Text = "📤Exportar reportes";
+            btnCancelar.UseVisualStyleBackColor = false;
+            // 
+            // btnGuardar
+            // 
+            btnGuardar.BackColor = Color.FromArgb(50, 13, 162);
+            btnGuardar.FlatStyle = FlatStyle.Flat;
+            btnGuardar.Font = new Font("Segoe UI", 9.5F, FontStyle.Bold);
+            btnGuardar.ForeColor = Color.White;
+            btnGuardar.Location = new Point(922, 3);
+            btnGuardar.Name = "btnGuardar";
+            btnGuardar.Size = new Size(167, 41);
+            btnGuardar.TabIndex = 13;
+            btnGuardar.Text = "📥 Importar datos";
+            btnGuardar.UseVisualStyleBackColor = false;
             // 
             // tableLayoutPanel3
             // 
@@ -115,12 +158,12 @@
             tableLayoutPanel3.Controls.Add(panel7, 0, 0);
             tableLayoutPanel3.Controls.Add(dgvPedidos, 0, 1);
             tableLayoutPanel3.Dock = DockStyle.Fill;
-            tableLayoutPanel3.Location = new Point(3, 403);
+            tableLayoutPanel3.Location = new Point(3, 375);
             tableLayoutPanel3.Name = "tableLayoutPanel3";
             tableLayoutPanel3.RowCount = 2;
             tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Absolute, 40F));
             tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel3.Size = new Size(1144, 260);
+            tableLayoutPanel3.Size = new Size(1144, 230);
             tableLayoutPanel3.TabIndex = 3;
             // 
             // panel7
@@ -178,7 +221,7 @@
             dgvPedidos.ReadOnly = true;
             dgvPedidos.RowHeadersVisible = false;
             dgvPedidos.RowHeadersWidth = 51;
-            dgvPedidos.Size = new Size(1138, 214);
+            dgvPedidos.Size = new Size(1138, 184);
             dgvPedidos.TabIndex = 4;
             // 
             // nomCli
@@ -221,7 +264,7 @@
             tableLayoutPanel2.Name = "tableLayoutPanel2";
             tableLayoutPanel2.RowCount = 1;
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel2.Size = new Size(1144, 248);
+            tableLayoutPanel2.Size = new Size(1144, 220);
             tableLayoutPanel2.TabIndex = 4;
             // 
             // tableLayoutPanel5
@@ -265,7 +308,7 @@
             tableLayoutPanel5.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
             tableLayoutPanel5.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
             tableLayoutPanel5.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            tableLayoutPanel5.Size = new Size(566, 242);
+            tableLayoutPanel5.Size = new Size(566, 214);
             tableLayoutPanel5.TabIndex = 2;
             // 
             // panel5
@@ -323,7 +366,7 @@
             dgvSesiones.ReadOnly = true;
             dgvSesiones.RowHeadersVisible = false;
             dgvSesiones.RowHeadersWidth = 51;
-            dgvSesiones.Size = new Size(560, 196);
+            dgvSesiones.Size = new Size(560, 168);
             dgvSesiones.TabIndex = 2;
             // 
             // nomCliente
@@ -366,7 +409,7 @@
             tableLayoutPanel6.RowCount = 2;
             tableLayoutPanel6.RowStyles.Add(new RowStyle(SizeType.Absolute, 40F));
             tableLayoutPanel6.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel6.Size = new Size(566, 242);
+            tableLayoutPanel6.Size = new Size(566, 214);
             tableLayoutPanel6.TabIndex = 3;
             // 
             // panel6
@@ -424,7 +467,7 @@
             dgvFotografos.ReadOnly = true;
             dgvFotografos.RowHeadersVisible = false;
             dgvFotografos.RowHeadersWidth = 51;
-            dgvFotografos.Size = new Size(560, 196);
+            dgvFotografos.Size = new Size(560, 168);
             dgvFotografos.TabIndex = 3;
             // 
             // nomFoto
@@ -612,6 +655,7 @@
             Name = "UC_Inicio";
             Size = new Size(1150, 666);
             tableLayoutPanel1.ResumeLayout(false);
+            panel8.ResumeLayout(false);
             tableLayoutPanel3.ResumeLayout(false);
             panel7.ResumeLayout(false);
             panel7.PerformLayout();
@@ -674,5 +718,8 @@
         private DataGridViewTextBoxColumn formato;
         private DataGridViewTextBoxColumn cantidad;
         private DataGridViewTextBoxColumn entrega;
+        private Panel panel8;
+        private Button btnCancelar;
+        private Button btnGuardar;
     }
 }

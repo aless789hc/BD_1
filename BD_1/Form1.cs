@@ -17,8 +17,10 @@ namespace BD_1
 
         private void button1_Click_1(object sender, EventArgs e)
         {
+            // aqui solo pasa esto si el login es correcto y si el usuario si esta registrado en la BD
             DashBoard nuevo = new DashBoard();
             nuevo.Show();
+            this.Hide();
         }
     }
 }

@@ -31,8 +31,10 @@
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DashBoard));
             panel_sideBar = new Panel();
-            button1 = new Button();
-            button3 = new Button();
+            btnPerfil = new Button();
+            btnSesionSistema = new Button();
+            btnGestion = new Button();
+            btnRol = new Button();
             btnPedido = new Button();
             btnSesion = new Button();
             btnFotografo = new Button();
@@ -43,7 +45,7 @@
             button6 = new Button();
             panel_Contenido = new Panel();
             animTimer = new System.Windows.Forms.Timer(components);
-            button2 = new Button();
+            btnCerrarSesion = new Button();
             panel_sideBar.SuspendLayout();
             panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -52,9 +54,11 @@
             // panel_sideBar
             // 
             panel_sideBar.BackColor = Color.FromArgb(50, 13, 162);
-            panel_sideBar.Controls.Add(button2);
-            panel_sideBar.Controls.Add(button1);
-            panel_sideBar.Controls.Add(button3);
+            panel_sideBar.Controls.Add(btnCerrarSesion);
+            panel_sideBar.Controls.Add(btnPerfil);
+            panel_sideBar.Controls.Add(btnSesionSistema);
+            panel_sideBar.Controls.Add(btnGestion);
+            panel_sideBar.Controls.Add(btnRol);
             panel_sideBar.Controls.Add(btnPedido);
             panel_sideBar.Controls.Add(btnSesion);
             panel_sideBar.Controls.Add(btnFotografo);
@@ -64,42 +68,76 @@
             panel_sideBar.Dock = DockStyle.Left;
             panel_sideBar.Location = new Point(0, 0);
             panel_sideBar.Name = "panel_sideBar";
-            panel_sideBar.Size = new Size(220, 666);
+            panel_sideBar.Size = new Size(225, 666);
             panel_sideBar.TabIndex = 0;
             // 
-            // button1
+            // btnPerfil
             // 
-            button1.BackColor = Color.FromArgb(50, 13, 162);
-            button1.Dock = DockStyle.Top;
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Segoe UI", 13.8F);
-            button1.ForeColor = Color.White;
-            button1.Location = new Point(0, 320);
-            button1.Name = "button1";
-            button1.Size = new Size(220, 45);
-            button1.TabIndex = 20;
-            button1.Text = "⚙️ Administrador";
-            button1.TextAlign = ContentAlignment.MiddleLeft;
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click;
+            btnPerfil.BackColor = Color.FromArgb(50, 13, 162);
+            btnPerfil.Dock = DockStyle.Top;
+            btnPerfil.FlatAppearance.BorderSize = 0;
+            btnPerfil.FlatStyle = FlatStyle.Flat;
+            btnPerfil.Font = new Font("Segoe UI", 13.8F);
+            btnPerfil.ForeColor = Color.White;
+            btnPerfil.Location = new Point(0, 481);
+            btnPerfil.Name = "btnPerfil";
+            btnPerfil.Size = new Size(225, 45);
+            btnPerfil.TabIndex = 19;
+            btnPerfil.Text = "👤Perfil";
+            btnPerfil.TextAlign = ContentAlignment.MiddleLeft;
+            btnPerfil.UseVisualStyleBackColor = false;
+            btnPerfil.Click += btnPerfil_Click;
             // 
-            // button3
+            // btnSesionSistema
             // 
-            button3.BackColor = Color.FromArgb(50, 13, 162);
-            button3.Dock = DockStyle.Top;
-            button3.FlatAppearance.BorderSize = 0;
-            button3.FlatStyle = FlatStyle.Flat;
-            button3.Font = new Font("Segoe UI", 13.8F);
-            button3.ForeColor = Color.White;
-            button3.Location = new Point(0, 275);
-            button3.Name = "button3";
-            button3.Size = new Size(220, 45);
-            button3.TabIndex = 19;
-            button3.Text = "👤Perfil";
-            button3.TextAlign = ContentAlignment.MiddleLeft;
-            button3.UseVisualStyleBackColor = false;
-            button3.Click += button3_Click_1;
+            btnSesionSistema.BackColor = Color.FromArgb(50, 13, 162);
+            btnSesionSistema.Dock = DockStyle.Top;
+            btnSesionSistema.FlatAppearance.BorderSize = 0;
+            btnSesionSistema.FlatStyle = FlatStyle.Flat;
+            btnSesionSistema.Font = new Font("Segoe UI", 13.8F);
+            btnSesionSistema.ForeColor = Color.White;
+            btnSesionSistema.Location = new Point(0, 399);
+            btnSesionSistema.Name = "btnSesionSistema";
+            btnSesionSistema.Size = new Size(225, 82);
+            btnSesionSistema.TabIndex = 22;
+            btnSesionSistema.Text = "🔑Sesiones\r\n del sistema";
+            btnSesionSistema.TextAlign = ContentAlignment.MiddleLeft;
+            btnSesionSistema.UseVisualStyleBackColor = false;
+            btnSesionSistema.Click += btnSesionSistema_Click;
+            // 
+            // btnGestion
+            // 
+            btnGestion.BackColor = Color.FromArgb(50, 13, 162);
+            btnGestion.Dock = DockStyle.Top;
+            btnGestion.FlatAppearance.BorderSize = 0;
+            btnGestion.FlatStyle = FlatStyle.Flat;
+            btnGestion.Font = new Font("Segoe UI", 13.8F);
+            btnGestion.ForeColor = Color.White;
+            btnGestion.Location = new Point(0, 326);
+            btnGestion.Name = "btnGestion";
+            btnGestion.Size = new Size(225, 73);
+            btnGestion.TabIndex = 21;
+            btnGestion.Text = "🛡️Gestión de Usuarios";
+            btnGestion.TextAlign = ContentAlignment.MiddleLeft;
+            btnGestion.UseVisualStyleBackColor = false;
+            btnGestion.Click += btnGestion_Click;
+            // 
+            // btnRol
+            // 
+            btnRol.BackColor = Color.FromArgb(50, 13, 162);
+            btnRol.Dock = DockStyle.Top;
+            btnRol.FlatAppearance.BorderSize = 0;
+            btnRol.FlatStyle = FlatStyle.Flat;
+            btnRol.Font = new Font("Segoe UI", 13.2000008F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnRol.ForeColor = Color.White;
+            btnRol.Location = new Point(0, 275);
+            btnRol.Name = "btnRol";
+            btnRol.Size = new Size(225, 51);
+            btnRol.TabIndex = 20;
+            btnRol.Text = "🔒Roles y permisos";
+            btnRol.TextAlign = ContentAlignment.MiddleLeft;
+            btnRol.UseVisualStyleBackColor = false;
+            btnRol.Click += btnRol_Click;
             // 
             // btnPedido
             // 
@@ -111,7 +149,7 @@
             btnPedido.ForeColor = Color.White;
             btnPedido.Location = new Point(0, 230);
             btnPedido.Name = "btnPedido";
-            btnPedido.Size = new Size(220, 45);
+            btnPedido.Size = new Size(225, 45);
             btnPedido.TabIndex = 18;
             btnPedido.Text = "\U0001f6d2 Pedidos";
             btnPedido.TextAlign = ContentAlignment.MiddleLeft;
@@ -128,7 +166,7 @@
             btnSesion.ForeColor = Color.White;
             btnSesion.Location = new Point(0, 185);
             btnSesion.Name = "btnSesion";
-            btnSesion.Size = new Size(220, 45);
+            btnSesion.Size = new Size(225, 45);
             btnSesion.TabIndex = 17;
             btnSesion.Text = "🗓️ Sesiones";
             btnSesion.TextAlign = ContentAlignment.MiddleLeft;
@@ -145,7 +183,7 @@
             btnFotografo.ForeColor = Color.White;
             btnFotografo.Location = new Point(0, 140);
             btnFotografo.Name = "btnFotografo";
-            btnFotografo.Size = new Size(220, 45);
+            btnFotografo.Size = new Size(225, 45);
             btnFotografo.TabIndex = 15;
             btnFotografo.Text = "📷 Fotógrafo";
             btnFotografo.TextAlign = ContentAlignment.MiddleLeft;
@@ -162,7 +200,7 @@
             btnClientes.ForeColor = Color.White;
             btnClientes.Location = new Point(0, 95);
             btnClientes.Name = "btnClientes";
-            btnClientes.Size = new Size(220, 45);
+            btnClientes.Size = new Size(225, 45);
             btnClientes.TabIndex = 12;
             btnClientes.Text = "👥 Clientes";
             btnClientes.TextAlign = ContentAlignment.MiddleLeft;
@@ -179,7 +217,7 @@
             btnInicio.ForeColor = Color.White;
             btnInicio.Location = new Point(0, 50);
             btnInicio.Name = "btnInicio";
-            btnInicio.Size = new Size(220, 45);
+            btnInicio.Size = new Size(225, 45);
             btnInicio.TabIndex = 11;
             btnInicio.Text = "🏠 Inicio";
             btnInicio.TextAlign = ContentAlignment.MiddleLeft;
@@ -193,7 +231,7 @@
             panel3.Dock = DockStyle.Top;
             panel3.Location = new Point(0, 0);
             panel3.Name = "panel3";
-            panel3.Size = new Size(220, 50);
+            panel3.Size = new Size(225, 50);
             panel3.TabIndex = 0;
             // 
             // pictureBox1
@@ -202,7 +240,7 @@
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
             pictureBox1.Location = new Point(0, 0);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(159, 50);
+            pictureBox1.Size = new Size(164, 50);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
@@ -215,7 +253,7 @@
             button6.FlatStyle = FlatStyle.Flat;
             button6.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button6.ForeColor = Color.White;
-            button6.Location = new Point(159, 0);
+            button6.Location = new Point(164, 0);
             button6.Name = "button6";
             button6.Size = new Size(61, 50);
             button6.TabIndex = 0;
@@ -225,27 +263,27 @@
             // panel_Contenido
             // 
             panel_Contenido.Dock = DockStyle.Fill;
-            panel_Contenido.Location = new Point(220, 0);
+            panel_Contenido.Location = new Point(225, 0);
             panel_Contenido.Name = "panel_Contenido";
-            panel_Contenido.Size = new Size(999, 666);
+            panel_Contenido.Size = new Size(994, 666);
             panel_Contenido.TabIndex = 1;
             // 
-            // button2
+            // btnCerrarSesion
             // 
-            button2.BackColor = Color.FromArgb(50, 13, 162);
-            button2.Dock = DockStyle.Top;
-            button2.FlatAppearance.BorderSize = 0;
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.Font = new Font("Segoe UI", 13.8F);
-            button2.ForeColor = Color.White;
-            button2.Location = new Point(0, 365);
-            button2.Name = "button2";
-            button2.Size = new Size(220, 45);
-            button2.TabIndex = 21;
-            button2.Text = "⚙️ Administrador";
-            button2.TextAlign = ContentAlignment.MiddleLeft;
-            button2.UseVisualStyleBackColor = false;
-            button2.Click += button2_Click;
+            btnCerrarSesion.BackColor = Color.FromArgb(247, 34, 34);
+            btnCerrarSesion.Dock = DockStyle.Bottom;
+            btnCerrarSesion.FlatAppearance.BorderSize = 0;
+            btnCerrarSesion.FlatStyle = FlatStyle.Flat;
+            btnCerrarSesion.Font = new Font("Segoe UI", 13.8F);
+            btnCerrarSesion.ForeColor = Color.White;
+            btnCerrarSesion.Location = new Point(0, 621);
+            btnCerrarSesion.Name = "btnCerrarSesion";
+            btnCerrarSesion.Size = new Size(225, 45);
+            btnCerrarSesion.TabIndex = 23;
+            btnCerrarSesion.Text = "⛔ Cerrar sesión";
+            btnCerrarSesion.TextAlign = ContentAlignment.MiddleLeft;
+            btnCerrarSesion.UseVisualStyleBackColor = false;
+            btnCerrarSesion.Click += btnCerrarSesion_Click;
             // 
             // DashBoard
             // 
@@ -276,10 +314,12 @@
         private Button button6;
         private PictureBox pictureBox1;
         private System.Windows.Forms.Timer animTimer;
-        private Button button3;
+        private Button btnPerfil;
         private Button btnPedido;
         private Button btnSesion;
-        private Button button1;
-        private Button button2;
+        private Button btnRol;
+        private Button btnGestion;
+        private Button btnSesionSistema;
+        private Button btnCerrarSesion;
     }
 }

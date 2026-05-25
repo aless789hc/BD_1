@@ -5,6 +5,7 @@
         // Hazaaam dependiendo del rol, en cada UC tendras que ocultar ya sea paneles, componentes
         // y si es tableLayout y quieres ocultar solo una fila
         // primero ocultas los componentes que no podra ver y luego contraes la fila del tableLayout que quieres ocultar
+        // ah y por cada rol tendras que ver que permisos tiene para que puedas ocultar o mostrar componentes segun el rol del usuario que haya iniciado sesion
         private bool sidebarExpanded = true;
         public DashBoard()
         {
@@ -29,6 +30,7 @@
             /* animTimer.Interval = 10;
              animTimer.Tick += animTimer_Tick;*/
             CargarVista(new UC_Inicio());
+            btnPerfil.Visible = false;
         }
 
 
@@ -96,18 +98,31 @@
             CargarVista(new UC_Pedidos());
         }
 
-        private void button3_Click_1(object sender, EventArgs e)
+        private void btnPerfil_Click(object sender, EventArgs e)
         {
             CargarVista(new UC_Perfil());
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnRol_Click(object sender, EventArgs e)
         {
             CargarVista(new UC_Roles());
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btnGestion_Click(object sender, EventArgs e)
         {
+            CargarVista(new UC_Gestion());
+        }
+        private void btnSesionSistema_Click(object sender, EventArgs e)
+        {
+            CargarVista(new UC_Sesion_Sistema());
+        }
+
+        private void btnCerrarSesion_Click(object sender, EventArgs e)
+        {
+            // tenemos que actualizar ses_fin en la BD 
+            this.Close();
+             Login login = new Login();
+             login.Show();
 
         }
     }
