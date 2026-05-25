@@ -30,7 +30,7 @@
             /* animTimer.Interval = 10;
              animTimer.Tick += animTimer_Tick;*/
             CargarVista(new UC_Inicio());
-            btnPerfil.Visible = false;
+            
         }
 
 
