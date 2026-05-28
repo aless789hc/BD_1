@@ -205,6 +205,7 @@
             btnMostrarNueva.TabIndex = 27;
             btnMostrarNueva.Text = "👁️";
             btnMostrarNueva.UseVisualStyleBackColor = false;
+            btnMostrarNueva.Click += btnMostrarNueva_Click;
             // 
             // txtPwd
             // 

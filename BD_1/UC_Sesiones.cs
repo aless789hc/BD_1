@@ -11,9 +11,8 @@
         {
             cmbCliente.Items.Clear();
             cmbFotografo.Items.Clear();
-            txtTipo.Text = "";
+            cmbPaquete.Items.Clear();
             nmdHora.Value = 1;
-            txtPrecio.Text = "";
             cmbEstado.SelectedIndex = 0;
         }
 

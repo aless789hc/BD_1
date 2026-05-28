@@ -28,13 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             dgvClientes = new DataGridView();
             id = new DataGridViewTextBoxColumn();
-            nombre = new DataGridViewTextBoxColumn();
-            apPat = new DataGridViewTextBoxColumn();
-            apMat = new DataGridViewTextBoxColumn();
+            cli_nombre_completo = new DataGridViewTextBoxColumn();
             telefono = new DataGridViewTextBoxColumn();
             email = new DataGridViewTextBoxColumn();
             tableLayoutPanel2 = new TableLayoutPanel();
@@ -45,6 +43,7 @@
             btnEditar = new Button();
             tableLayoutPanel1 = new TableLayoutPanel();
             label1 = new Label();
+            tableLayoutPanel3 = new TableLayoutPanel();
             tlpFormulario = new TableLayoutPanel();
             label2 = new Label();
             label5 = new Label();
@@ -60,11 +59,23 @@
             panel1 = new Panel();
             btnCancelar = new Button();
             btnGuardar = new Button();
+            tableLayoutPanel4 = new TableLayoutPanel();
+            label12 = new Label();
+            txtMotificado = new TextBox();
+            txtFechaModi = new TextBox();
+            label11 = new Label();
+            label9 = new Label();
+            txtCreado = new TextBox();
+            txtFechaC = new TextBox();
+            label10 = new Label();
+            label7 = new Label();
             ((System.ComponentModel.ISupportInitialize)dgvClientes).BeginInit();
             tableLayoutPanel2.SuspendLayout();
             tableLayoutPanel1.SuspendLayout();
+            tableLayoutPanel3.SuspendLayout();
             tlpFormulario.SuspendLayout();
             panel1.SuspendLayout();
+            tableLayoutPanel4.SuspendLayout();
             SuspendLayout();
             // 
             // dgvClientes
@@ -73,33 +84,32 @@
             dgvClientes.AllowUserToDeleteRows = false;
             dgvClientes.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvClientes.BackgroundColor = Color.White;
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = SystemColors.Control;
-            dataGridViewCellStyle3.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle3.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
-            dgvClientes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = SystemColors.Control;
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dgvClientes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dgvClientes.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvClientes.Columns.AddRange(new DataGridViewColumn[] { id, nombre, apPat, apMat, telefono, email });
-            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = SystemColors.Window;
-            dataGridViewCellStyle4.Font = new Font("Segoe UI", 9.5F);
-            dataGridViewCellStyle4.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.False;
-            dgvClientes.DefaultCellStyle = dataGridViewCellStyle4;
+            dgvClientes.Columns.AddRange(new DataGridViewColumn[] { id, cli_nombre_completo, telefono, email });
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = SystemColors.Window;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9.5F);
+            dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            dgvClientes.DefaultCellStyle = dataGridViewCellStyle2;
             dgvClientes.Dock = DockStyle.Fill;
             dgvClientes.GridColor = Color.FromArgb(227, 230, 245);
             dgvClientes.Location = new Point(0, 116);
             dgvClientes.Margin = new Padding(10, 3, 10, 3);
             dgvClientes.Name = "dgvClientes";
-            dgvClientes.ReadOnly = true;
             dgvClientes.RowHeadersVisible = false;
             dgvClientes.RowHeadersWidth = 51;
-            dgvClientes.Size = new Size(938, 479);
+            dgvClientes.Size = new Size(938, 520);
             dgvClientes.TabIndex = 9;
             // 
             // id
@@ -108,31 +118,13 @@
             id.HeaderText = "ID";
             id.MinimumWidth = 6;
             id.Name = "id";
-            id.ReadOnly = true;
             // 
-            // nombre
+            // cli_nombre_completo
             // 
-            nombre.FillWeight = 112.506271F;
-            nombre.HeaderText = "Nombre";
-            nombre.MinimumWidth = 6;
-            nombre.Name = "nombre";
-            nombre.ReadOnly = true;
-            // 
-            // apPat
-            // 
-            apPat.FillWeight = 114.16674F;
-            apPat.HeaderText = "Ap. paterno";
-            apPat.MinimumWidth = 6;
-            apPat.Name = "apPat";
-            apPat.ReadOnly = true;
-            // 
-            // apMat
-            // 
-            apMat.FillWeight = 117.320549F;
-            apMat.HeaderText = "Ap. materno";
-            apMat.MinimumWidth = 6;
-            apMat.Name = "apMat";
-            apMat.ReadOnly = true;
+            cli_nombre_completo.FillWeight = 112.506271F;
+            cli_nombre_completo.HeaderText = "Nombre Completo";
+            cli_nombre_completo.MinimumWidth = 6;
+            cli_nombre_completo.Name = "cli_nombre_completo";
             // 
             // telefono
             // 
@@ -140,7 +132,6 @@
             telefono.HeaderText = "Teléfono";
             telefono.MinimumWidth = 6;
             telefono.Name = "telefono";
-            telefono.ReadOnly = true;
             // 
             // email
             // 
@@ -148,7 +139,6 @@
             email.HeaderText = "Email";
             email.MinimumWidth = 6;
             email.Name = "email";
-            email.ReadOnly = true;
             // 
             // tableLayoutPanel2
             // 
@@ -266,6 +256,21 @@
             label1.Text = "Clientes";
             label1.TextAlign = ContentAlignment.MiddleCenter;
             // 
+            // tableLayoutPanel3
+            // 
+            tableLayoutPanel3.ColumnCount = 1;
+            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+            tableLayoutPanel3.Controls.Add(tlpFormulario, 0, 0);
+            tableLayoutPanel3.Controls.Add(tableLayoutPanel4, 0, 1);
+            tableLayoutPanel3.Dock = DockStyle.Bottom;
+            tableLayoutPanel3.Location = new Point(0, 175);
+            tableLayoutPanel3.Name = "tableLayoutPanel3";
+            tableLayoutPanel3.RowCount = 2;
+            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 58.35141F));
+            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 41.64859F));
+            tableLayoutPanel3.Size = new Size(938, 461);
+            tableLayoutPanel3.TabIndex = 10;
+            // 
             // tlpFormulario
             // 
             tlpFormulario.BackColor = Color.FromArgb(227, 230, 245);
@@ -286,8 +291,8 @@
             tlpFormulario.Controls.Add(txtNombre, 0, 2);
             tlpFormulario.Controls.Add(txtEmail, 0, 4);
             tlpFormulario.Controls.Add(panel1, 2, 5);
-            tlpFormulario.Dock = DockStyle.Bottom;
-            tlpFormulario.Location = new Point(0, 323);
+            tlpFormulario.Dock = DockStyle.Top;
+            tlpFormulario.Location = new Point(3, 3);
             tlpFormulario.Name = "tlpFormulario";
             tlpFormulario.Padding = new Padding(20);
             tlpFormulario.RowCount = 6;
@@ -297,8 +302,8 @@
             tlpFormulario.RowStyles.Add(new RowStyle(SizeType.Absolute, 32F));
             tlpFormulario.RowStyles.Add(new RowStyle(SizeType.Absolute, 42F));
             tlpFormulario.RowStyles.Add(new RowStyle(SizeType.Absolute, 58F));
-            tlpFormulario.Size = new Size(938, 272);
-            tlpFormulario.TabIndex = 10;
+            tlpFormulario.Size = new Size(932, 263);
+            tlpFormulario.TabIndex = 12;
             // 
             // label2
             // 
@@ -315,9 +320,9 @@
             label5.Anchor = AnchorStyles.None;
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 10.2F);
-            label5.Location = new Point(697, 53);
+            label5.Location = new Point(692, 47);
             label5.Name = "label5";
-            label5.Size = new Size(142, 23);
+            label5.Size = new Size(142, 21);
             label5.TabIndex = 18;
             label5.Text = "Apellido Materno";
             // 
@@ -326,9 +331,9 @@
             label3.Anchor = AnchorStyles.None;
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 10.2F);
-            label3.Location = new Point(133, 53);
+            label3.Location = new Point(132, 47);
             label3.Name = "label3";
-            label3.Size = new Size(73, 23);
+            label3.Size = new Size(73, 21);
             label3.TabIndex = 16;
             label3.Text = "Nombre";
             // 
@@ -337,9 +342,9 @@
             label4.Anchor = AnchorStyles.None;
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 10.2F);
-            label4.Location = new Point(400, 53);
+            label4.Location = new Point(397, 47);
             label4.Name = "label4";
-            label4.Size = new Size(136, 23);
+            label4.Size = new Size(136, 21);
             label4.TabIndex = 17;
             label4.Text = "Apellido Paterno";
             // 
@@ -348,7 +353,7 @@
             label6.Anchor = AnchorStyles.None;
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 10.2F);
-            label6.Location = new Point(731, 123);
+            label6.Location = new Point(726, 114);
             label6.Name = "label6";
             label6.Size = new Size(74, 23);
             label6.TabIndex = 19;
@@ -360,7 +365,7 @@
             label8.AutoSize = true;
             tlpFormulario.SetColumnSpan(label8, 2);
             label8.Font = new Font("Segoe UI", 10.2F);
-            label8.Location = new Point(293, 123);
+            label8.Location = new Point(291, 114);
             label8.Name = "label8";
             label8.Size = new Size(51, 23);
             label8.TabIndex = 20;
@@ -370,40 +375,40 @@
             // 
             txtTelefono.Anchor = AnchorStyles.Left | AnchorStyles.Right;
             txtTelefono.Font = new Font("Segoe UI", 9.5F);
-            txtTelefono.Location = new Point(668, 157);
+            txtTelefono.Location = new Point(664, 148);
             txtTelefono.Margin = new Padding(50, 3, 50, 3);
             txtTelefono.Name = "txtTelefono";
-            txtTelefono.Size = new Size(200, 29);
+            txtTelefono.Size = new Size(198, 29);
             txtTelefono.TabIndex = 24;
             // 
             // txtApMat
             // 
             txtApMat.Anchor = AnchorStyles.Left | AnchorStyles.Right;
             txtApMat.Font = new Font("Segoe UI", 9.5F);
-            txtApMat.Location = new Point(668, 83);
+            txtApMat.Location = new Point(664, 74);
             txtApMat.Margin = new Padding(50, 3, 50, 3);
             txtApMat.Name = "txtApMat";
-            txtApMat.Size = new Size(200, 29);
+            txtApMat.Size = new Size(198, 29);
             txtApMat.TabIndex = 23;
             // 
             // txtApPat
             // 
             txtApPat.Anchor = AnchorStyles.Left | AnchorStyles.Right;
             txtApPat.Font = new Font("Segoe UI", 9.5F);
-            txtApPat.Location = new Point(369, 83);
+            txtApPat.Location = new Point(367, 74);
             txtApPat.Margin = new Padding(50, 3, 50, 3);
             txtApPat.Name = "txtApPat";
-            txtApPat.Size = new Size(199, 29);
+            txtApPat.Size = new Size(197, 29);
             txtApPat.TabIndex = 22;
             // 
             // txtNombre
             // 
             txtNombre.Anchor = AnchorStyles.Left | AnchorStyles.Right;
             txtNombre.Font = new Font("Segoe UI", 9.5F);
-            txtNombre.Location = new Point(70, 83);
+            txtNombre.Location = new Point(70, 74);
             txtNombre.Margin = new Padding(50, 3, 50, 3);
             txtNombre.Name = "txtNombre";
-            txtNombre.Size = new Size(199, 29);
+            txtNombre.Size = new Size(197, 29);
             txtNombre.TabIndex = 21;
             // 
             // txtEmail
@@ -411,10 +416,10 @@
             txtEmail.Anchor = AnchorStyles.Left | AnchorStyles.Right;
             tlpFormulario.SetColumnSpan(txtEmail, 2);
             txtEmail.Font = new Font("Segoe UI", 9.5F);
-            txtEmail.Location = new Point(70, 157);
+            txtEmail.Location = new Point(70, 148);
             txtEmail.Margin = new Padding(50, 3, 50, 3);
             txtEmail.Name = "txtEmail";
-            txtEmail.Size = new Size(498, 29);
+            txtEmail.Size = new Size(494, 29);
             txtEmail.TabIndex = 25;
             // 
             // panel1
@@ -422,9 +427,9 @@
             panel1.Controls.Add(btnCancelar);
             panel1.Controls.Add(btnGuardar);
             panel1.Dock = DockStyle.Fill;
-            panel1.Location = new Point(621, 196);
+            panel1.Location = new Point(617, 187);
             panel1.Name = "panel1";
-            panel1.Size = new Size(294, 53);
+            panel1.Size = new Size(292, 53);
             panel1.TabIndex = 26;
             // 
             // btnCancelar
@@ -439,7 +444,7 @@
             btnCancelar.TabIndex = 14;
             btnCancelar.Text = "Cancelar";
             btnCancelar.UseVisualStyleBackColor = false;
-            btnCancelar.Click += btnCancelar_Click;
+            btnCancelar.Click += btnCancelar_Click_1;
             // 
             // btnGuardar
             // 
@@ -453,26 +458,163 @@
             btnGuardar.TabIndex = 13;
             btnGuardar.Text = "Guardar";
             btnGuardar.UseVisualStyleBackColor = false;
-            btnGuardar.Click += btnGuardar_Click;
+            btnGuardar.Click += btnGuardar_Click_1;
+            // 
+            // tableLayoutPanel4
+            // 
+            tableLayoutPanel4.BackColor = Color.FromArgb(50, 13, 162);
+            tableLayoutPanel4.ColumnCount = 2;
+            tableLayoutPanel4.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tableLayoutPanel4.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tableLayoutPanel4.Controls.Add(label12, 0, 0);
+            tableLayoutPanel4.Controls.Add(txtMotificado, 0, 4);
+            tableLayoutPanel4.Controls.Add(txtFechaModi, 1, 4);
+            tableLayoutPanel4.Controls.Add(label11, 1, 3);
+            tableLayoutPanel4.Controls.Add(label9, 0, 3);
+            tableLayoutPanel4.Controls.Add(txtCreado, 0, 2);
+            tableLayoutPanel4.Controls.Add(txtFechaC, 1, 2);
+            tableLayoutPanel4.Controls.Add(label10, 1, 1);
+            tableLayoutPanel4.Controls.Add(label7, 0, 1);
+            tableLayoutPanel4.Dock = DockStyle.Fill;
+            tableLayoutPanel4.Location = new Point(3, 272);
+            tableLayoutPanel4.Name = "tableLayoutPanel4";
+            tableLayoutPanel4.RowCount = 5;
+            tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Percent, 60F));
+            tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Percent, 40F));
+            tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Absolute, 36F));
+            tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Absolute, 25F));
+            tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Absolute, 59F));
+            tableLayoutPanel4.Size = new Size(932, 186);
+            tableLayoutPanel4.TabIndex = 13;
+            // 
+            // label12
+            // 
+            label12.AutoSize = true;
+            label12.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label12.ForeColor = Color.White;
+            label12.Location = new Point(3, 0);
+            label12.Name = "label12";
+            label12.Size = new Size(203, 25);
+            label12.TabIndex = 29;
+            label12.Text = "📋 Datos de Auditoría";
+            // 
+            // txtMotificado
+            // 
+            txtMotificado.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            txtMotificado.BackColor = Color.FromArgb(227, 230, 245);
+            txtMotificado.Font = new Font("Segoe UI", 9.5F);
+            txtMotificado.Location = new Point(50, 141);
+            txtMotificado.Margin = new Padding(50, 3, 50, 3);
+            txtMotificado.Name = "txtMotificado";
+            txtMotificado.ReadOnly = true;
+            txtMotificado.Size = new Size(366, 29);
+            txtMotificado.TabIndex = 23;
+            // 
+            // txtFechaModi
+            // 
+            txtFechaModi.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            txtFechaModi.BackColor = Color.FromArgb(227, 230, 245);
+            txtFechaModi.Font = new Font("Segoe UI", 9.5F);
+            txtFechaModi.Location = new Point(516, 141);
+            txtFechaModi.Margin = new Padding(50, 3, 50, 3);
+            txtFechaModi.Name = "txtFechaModi";
+            txtFechaModi.ReadOnly = true;
+            txtFechaModi.Size = new Size(366, 29);
+            txtFechaModi.TabIndex = 28;
+            // 
+            // label11
+            // 
+            label11.Anchor = AnchorStyles.None;
+            label11.AutoSize = true;
+            label11.Font = new Font("Segoe UI", 10.2F);
+            label11.ForeColor = Color.White;
+            label11.Location = new Point(607, 102);
+            label11.Name = "label11";
+            label11.Size = new Size(184, 23);
+            label11.TabIndex = 26;
+            label11.Text = "Fecha de modificación:";
+            // 
+            // label9
+            // 
+            label9.Anchor = AnchorStyles.None;
+            label9.AutoSize = true;
+            label9.Font = new Font("Segoe UI", 10.2F);
+            label9.ForeColor = Color.White;
+            label9.Location = new Point(168, 102);
+            label9.Name = "label9";
+            label9.Size = new Size(130, 23);
+            label9.TabIndex = 24;
+            label9.Text = "Modificado por:";
+            // 
+            // txtCreado
+            // 
+            txtCreado.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            txtCreado.BackColor = Color.FromArgb(227, 230, 245);
+            txtCreado.Font = new Font("Segoe UI", 9.5F);
+            txtCreado.Location = new Point(50, 68);
+            txtCreado.Margin = new Padding(50, 3, 50, 3);
+            txtCreado.Name = "txtCreado";
+            txtCreado.ReadOnly = true;
+            txtCreado.Size = new Size(366, 29);
+            txtCreado.TabIndex = 22;
+            // 
+            // txtFechaC
+            // 
+            txtFechaC.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            txtFechaC.BackColor = Color.FromArgb(227, 230, 245);
+            txtFechaC.Font = new Font("Segoe UI", 9.5F);
+            txtFechaC.Location = new Point(516, 68);
+            txtFechaC.Margin = new Padding(50, 3, 50, 3);
+            txtFechaC.Name = "txtFechaC";
+            txtFechaC.ReadOnly = true;
+            txtFechaC.Size = new Size(366, 29);
+            txtFechaC.TabIndex = 27;
+            // 
+            // label10
+            // 
+            label10.Anchor = AnchorStyles.None;
+            label10.AutoSize = true;
+            label10.Font = new Font("Segoe UI", 10.2F);
+            label10.ForeColor = Color.White;
+            label10.Location = new Point(623, 40);
+            label10.Name = "label10";
+            label10.Size = new Size(151, 23);
+            label10.TabIndex = 25;
+            label10.Text = "Fecha de creación:";
+            // 
+            // label7
+            // 
+            label7.Anchor = AnchorStyles.None;
+            label7.AutoSize = true;
+            label7.Font = new Font("Segoe UI", 10.2F);
+            label7.ForeColor = Color.White;
+            label7.Location = new Point(183, 40);
+            label7.Name = "label7";
+            label7.Size = new Size(100, 23);
+            label7.TabIndex = 17;
+            label7.Text = "Creado por:";
             // 
             // UC_Cliente
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(tlpFormulario);
+            Controls.Add(tableLayoutPanel3);
             Controls.Add(dgvClientes);
             Controls.Add(tableLayoutPanel2);
             Controls.Add(tableLayoutPanel1);
             Name = "UC_Cliente";
-            Size = new Size(938, 595);
+            Size = new Size(938, 636);
             ((System.ComponentModel.ISupportInitialize)dgvClientes).EndInit();
             tableLayoutPanel2.ResumeLayout(false);
             tableLayoutPanel2.PerformLayout();
             tableLayoutPanel1.ResumeLayout(false);
             tableLayoutPanel1.PerformLayout();
+            tableLayoutPanel3.ResumeLayout(false);
             tlpFormulario.ResumeLayout(false);
             tlpFormulario.PerformLayout();
             panel1.ResumeLayout(false);
+            tableLayoutPanel4.ResumeLayout(false);
+            tableLayoutPanel4.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -481,14 +623,14 @@
         private DataGridView dgvClientes;
         private TableLayoutPanel tableLayoutPanel2;
         private TableLayoutPanel tableLayoutPanel1;
+        private TextBox txtBuscar;
+        private Button btnBuscar;
+        private Button btnAgregar;
+        private Button btnEliminar;
+        private Button btnEditar;
+        private Label label1;
+        private TableLayoutPanel tableLayoutPanel3;
         private TableLayoutPanel tlpFormulario;
-        private DataGridViewTextBoxColumn id;
-        private DataGridViewTextBoxColumn nombre;
-        private DataGridViewTextBoxColumn apPat;
-        private DataGridViewTextBoxColumn apMat;
-        private DataGridViewTextBoxColumn telefono;
-        private DataGridViewTextBoxColumn email;
-        private Label label2;
         private Label label5;
         private Label label3;
         private Label label4;
@@ -499,14 +641,23 @@
         private TextBox txtApPat;
         private TextBox txtNombre;
         private TextBox txtEmail;
-        private TextBox txtBuscar;
-        private Button btnBuscar;
-        private Button btnAgregar;
-        private Button btnEliminar;
-        private Button btnEditar;
         private Panel panel1;
         private Button btnCancelar;
         private Button btnGuardar;
-        private Label label1;
+        private DataGridViewTextBoxColumn id;
+        private DataGridViewTextBoxColumn cli_nombre_completo;
+        private DataGridViewTextBoxColumn telefono;
+        private DataGridViewTextBoxColumn email;
+        private TableLayoutPanel tableLayoutPanel4;
+        private TextBox txtCreado;
+        private TextBox txtMotificado;
+        private Label label9;
+        private Label label10;
+        private Label label11;
+        private TextBox txtFechaC;
+        private TextBox txtFechaModi;
+        private Label label7;
+        private Label label2;
+        private Label label12;
     }
 }

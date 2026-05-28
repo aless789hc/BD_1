@@ -31,11 +31,13 @@
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DashBoard));
             panel_sideBar = new Panel();
+            btnCerrarSesion = new Button();
             btnPerfil = new Button();
             btnSesionSistema = new Button();
             btnGestion = new Button();
             btnRol = new Button();
             btnPedido = new Button();
+            btnPaquete = new Button();
             btnSesion = new Button();
             btnFotografo = new Button();
             btnClientes = new Button();
@@ -45,7 +47,6 @@
             button6 = new Button();
             panel_Contenido = new Panel();
             animTimer = new System.Windows.Forms.Timer(components);
-            btnCerrarSesion = new Button();
             panel_sideBar.SuspendLayout();
             panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -60,6 +61,7 @@
             panel_sideBar.Controls.Add(btnGestion);
             panel_sideBar.Controls.Add(btnRol);
             panel_sideBar.Controls.Add(btnPedido);
+            panel_sideBar.Controls.Add(btnPaquete);
             panel_sideBar.Controls.Add(btnSesion);
             panel_sideBar.Controls.Add(btnFotografo);
             panel_sideBar.Controls.Add(btnClientes);
@@ -71,6 +73,23 @@
             panel_sideBar.Size = new Size(225, 666);
             panel_sideBar.TabIndex = 0;
             // 
+            // btnCerrarSesion
+            // 
+            btnCerrarSesion.BackColor = Color.FromArgb(247, 34, 34);
+            btnCerrarSesion.Dock = DockStyle.Bottom;
+            btnCerrarSesion.FlatAppearance.BorderSize = 0;
+            btnCerrarSesion.FlatStyle = FlatStyle.Flat;
+            btnCerrarSesion.Font = new Font("Segoe UI", 13.8F);
+            btnCerrarSesion.ForeColor = Color.White;
+            btnCerrarSesion.Location = new Point(0, 621);
+            btnCerrarSesion.Name = "btnCerrarSesion";
+            btnCerrarSesion.Size = new Size(225, 45);
+            btnCerrarSesion.TabIndex = 23;
+            btnCerrarSesion.Text = "⛔ Cerrar sesión";
+            btnCerrarSesion.TextAlign = ContentAlignment.MiddleLeft;
+            btnCerrarSesion.UseVisualStyleBackColor = false;
+            btnCerrarSesion.Click += btnCerrarSesion_Click;
+            // 
             // btnPerfil
             // 
             btnPerfil.BackColor = Color.FromArgb(50, 13, 162);
@@ -79,7 +98,7 @@
             btnPerfil.FlatStyle = FlatStyle.Flat;
             btnPerfil.Font = new Font("Segoe UI", 13.8F);
             btnPerfil.ForeColor = Color.White;
-            btnPerfil.Location = new Point(0, 481);
+            btnPerfil.Location = new Point(0, 526);
             btnPerfil.Name = "btnPerfil";
             btnPerfil.Size = new Size(225, 45);
             btnPerfil.TabIndex = 19;
@@ -96,7 +115,7 @@
             btnSesionSistema.FlatStyle = FlatStyle.Flat;
             btnSesionSistema.Font = new Font("Segoe UI", 13.8F);
             btnSesionSistema.ForeColor = Color.White;
-            btnSesionSistema.Location = new Point(0, 399);
+            btnSesionSistema.Location = new Point(0, 444);
             btnSesionSistema.Name = "btnSesionSistema";
             btnSesionSistema.Size = new Size(225, 82);
             btnSesionSistema.TabIndex = 22;
@@ -113,7 +132,7 @@
             btnGestion.FlatStyle = FlatStyle.Flat;
             btnGestion.Font = new Font("Segoe UI", 13.8F);
             btnGestion.ForeColor = Color.White;
-            btnGestion.Location = new Point(0, 326);
+            btnGestion.Location = new Point(0, 371);
             btnGestion.Name = "btnGestion";
             btnGestion.Size = new Size(225, 73);
             btnGestion.TabIndex = 21;
@@ -130,7 +149,7 @@
             btnRol.FlatStyle = FlatStyle.Flat;
             btnRol.Font = new Font("Segoe UI", 13.2000008F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnRol.ForeColor = Color.White;
-            btnRol.Location = new Point(0, 275);
+            btnRol.Location = new Point(0, 320);
             btnRol.Name = "btnRol";
             btnRol.Size = new Size(225, 51);
             btnRol.TabIndex = 20;
@@ -147,7 +166,7 @@
             btnPedido.FlatStyle = FlatStyle.Flat;
             btnPedido.Font = new Font("Segoe UI", 13.8F);
             btnPedido.ForeColor = Color.White;
-            btnPedido.Location = new Point(0, 230);
+            btnPedido.Location = new Point(0, 275);
             btnPedido.Name = "btnPedido";
             btnPedido.Size = new Size(225, 45);
             btnPedido.TabIndex = 18;
@@ -155,6 +174,23 @@
             btnPedido.TextAlign = ContentAlignment.MiddleLeft;
             btnPedido.UseVisualStyleBackColor = false;
             btnPedido.Click += btnPedido_Click;
+            // 
+            // btnPaquete
+            // 
+            btnPaquete.BackColor = Color.FromArgb(50, 13, 162);
+            btnPaquete.Dock = DockStyle.Top;
+            btnPaquete.FlatAppearance.BorderSize = 0;
+            btnPaquete.FlatStyle = FlatStyle.Flat;
+            btnPaquete.Font = new Font("Segoe UI", 13.8F);
+            btnPaquete.ForeColor = Color.White;
+            btnPaquete.Location = new Point(0, 230);
+            btnPaquete.Name = "btnPaquete";
+            btnPaquete.Size = new Size(225, 45);
+            btnPaquete.TabIndex = 24;
+            btnPaquete.Text = "📦 Paquetes";
+            btnPaquete.TextAlign = ContentAlignment.MiddleLeft;
+            btnPaquete.UseVisualStyleBackColor = false;
+            btnPaquete.Click += btnPaquete_Click;
             // 
             // btnSesion
             // 
@@ -259,6 +295,7 @@
             button6.TabIndex = 0;
             button6.Text = "≡";
             button6.UseVisualStyleBackColor = false;
+            button6.Click += button6_Click;
             // 
             // panel_Contenido
             // 
@@ -267,23 +304,6 @@
             panel_Contenido.Name = "panel_Contenido";
             panel_Contenido.Size = new Size(994, 666);
             panel_Contenido.TabIndex = 1;
-            // 
-            // btnCerrarSesion
-            // 
-            btnCerrarSesion.BackColor = Color.FromArgb(247, 34, 34);
-            btnCerrarSesion.Dock = DockStyle.Bottom;
-            btnCerrarSesion.FlatAppearance.BorderSize = 0;
-            btnCerrarSesion.FlatStyle = FlatStyle.Flat;
-            btnCerrarSesion.Font = new Font("Segoe UI", 13.8F);
-            btnCerrarSesion.ForeColor = Color.White;
-            btnCerrarSesion.Location = new Point(0, 621);
-            btnCerrarSesion.Name = "btnCerrarSesion";
-            btnCerrarSesion.Size = new Size(225, 45);
-            btnCerrarSesion.TabIndex = 23;
-            btnCerrarSesion.Text = "⛔ Cerrar sesión";
-            btnCerrarSesion.TextAlign = ContentAlignment.MiddleLeft;
-            btnCerrarSesion.UseVisualStyleBackColor = false;
-            btnCerrarSesion.Click += btnCerrarSesion_Click;
             // 
             // DashBoard
             // 
@@ -321,5 +341,6 @@
         private Button btnGestion;
         private Button btnSesionSistema;
         private Button btnCerrarSesion;
+        private Button btnPaquete;
     }
 }

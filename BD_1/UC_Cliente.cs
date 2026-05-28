@@ -54,16 +54,20 @@ namespace BD_1
             // Aquí se elimina el cliente seleccionado
         }
 
-        private void btnGuardar_Click(object sender, EventArgs e)
-        {
-            // INSERT o UPDATE según sea agregar o editar
+       
 
+        
+
+        private void btnCancelar_Click_1(object sender, EventArgs e)
+        {
             tlpFormulario.Visible = false;
             LimpiarFormulario();
         }
 
-        private void btnCancelar_Click(object sender, EventArgs e)
+        private void btnGuardar_Click_1(object sender, EventArgs e)
         {
+            // INSERT o UPDATE según sea agregar o editar
+
             tlpFormulario.Visible = false;
             LimpiarFormulario();
         }

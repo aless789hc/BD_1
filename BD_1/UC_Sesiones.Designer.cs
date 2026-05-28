@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             tableLayoutPanel2 = new TableLayoutPanel();
             txtBuscar = new TextBox();
             btnAgregar = new Button();
@@ -38,14 +38,6 @@
             tableLayoutPanel1 = new TableLayoutPanel();
             label1 = new Label();
             dgvSesiones = new DataGridView();
-            id = new DataGridViewTextBoxColumn();
-            fecha = new DataGridViewTextBoxColumn();
-            tipo = new DataGridViewTextBoxColumn();
-            cliente = new DataGridViewTextBoxColumn();
-            fotografo = new DataGridViewTextBoxColumn();
-            horas = new DataGridViewTextBoxColumn();
-            precio = new DataGridViewTextBoxColumn();
-            estado = new DataGridViewTextBoxColumn();
             label2 = new Label();
             tlpFormulario = new TableLayoutPanel();
             cmbCliente = new ComboBox();
@@ -57,14 +49,19 @@
             label9 = new Label();
             label5 = new Label();
             nmdHora = new NumericUpDown();
-            label6 = new Label();
             label8 = new Label();
-            txtPrecio = new TextBox();
             label7 = new Label();
             panel1 = new Panel();
             btnCancelar = new Button();
             btnGuardar = new Button();
-            txtTipo = new TextBox();
+            cmbPaquete = new ComboBox();
+            id = new DataGridViewTextBoxColumn();
+            fecha = new DataGridViewTextBoxColumn();
+            horas = new DataGridViewTextBoxColumn();
+            estado = new DataGridViewTextBoxColumn();
+            cliente = new DataGridViewTextBoxColumn();
+            fotografo = new DataGridViewTextBoxColumn();
+            paquete = new DataGridViewTextBoxColumn();
             tableLayoutPanel2.SuspendLayout();
             tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvSesiones).BeginInit();
@@ -180,24 +177,24 @@
             dgvSesiones.AllowUserToDeleteRows = false;
             dgvSesiones.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvSesiones.BackgroundColor = Color.White;
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = SystemColors.Control;
-            dataGridViewCellStyle3.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle3.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
-            dgvSesiones.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = SystemColors.Control;
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dgvSesiones.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dgvSesiones.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvSesiones.Columns.AddRange(new DataGridViewColumn[] { id, fecha, tipo, cliente, fotografo, horas, precio, estado });
-            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = SystemColors.Window;
-            dataGridViewCellStyle4.Font = new Font("Segoe UI", 9.5F);
-            dataGridViewCellStyle4.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.False;
-            dgvSesiones.DefaultCellStyle = dataGridViewCellStyle4;
+            dgvSesiones.Columns.AddRange(new DataGridViewColumn[] { id, fecha, horas, estado, cliente, fotografo, paquete });
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = SystemColors.Window;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9.5F);
+            dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            dgvSesiones.DefaultCellStyle = dataGridViewCellStyle2;
             dgvSesiones.Dock = DockStyle.Fill;
             dgvSesiones.GridColor = Color.FromArgb(227, 230, 245);
             dgvSesiones.Location = new Point(0, 116);
@@ -208,69 +205,13 @@
             dgvSesiones.Size = new Size(930, 152);
             dgvSesiones.TabIndex = 19;
             // 
-            // id
-            // 
-            id.HeaderText = "ID";
-            id.MinimumWidth = 6;
-            id.Name = "id";
-            id.ReadOnly = true;
-            // 
-            // fecha
-            // 
-            fecha.HeaderText = "Fecha";
-            fecha.MinimumWidth = 6;
-            fecha.Name = "fecha";
-            fecha.ReadOnly = true;
-            // 
-            // tipo
-            // 
-            tipo.HeaderText = "Tipo";
-            tipo.MinimumWidth = 6;
-            tipo.Name = "tipo";
-            tipo.ReadOnly = true;
-            // 
-            // cliente
-            // 
-            cliente.HeaderText = "Cliente";
-            cliente.MinimumWidth = 6;
-            cliente.Name = "cliente";
-            cliente.ReadOnly = true;
-            // 
-            // fotografo
-            // 
-            fotografo.HeaderText = "Fotógrafo";
-            fotografo.MinimumWidth = 6;
-            fotografo.Name = "fotografo";
-            fotografo.ReadOnly = true;
-            // 
-            // horas
-            // 
-            horas.HeaderText = "Horas";
-            horas.MinimumWidth = 6;
-            horas.Name = "horas";
-            horas.ReadOnly = true;
-            // 
-            // precio
-            // 
-            precio.HeaderText = "Precio";
-            precio.MinimumWidth = 6;
-            precio.Name = "precio";
-            precio.ReadOnly = true;
-            // 
-            // estado
-            // 
-            estado.HeaderText = "Estado";
-            estado.MinimumWidth = 6;
-            estado.Name = "estado";
-            estado.ReadOnly = true;
-            // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.Location = new Point(23, 20);
             label2.Name = "label2";
-            label2.Size = new Size(196, 23);
+            label2.Size = new Size(196, 25);
             label2.TabIndex = 1;
             label2.Text = "🗓️ Datos de la sesión";
             // 
@@ -292,25 +233,22 @@
             tlpFormulario.Controls.Add(label9, 2, 1);
             tlpFormulario.Controls.Add(label5, 0, 3);
             tlpFormulario.Controls.Add(nmdHora, 0, 4);
-            tlpFormulario.Controls.Add(label6, 1, 3);
-            tlpFormulario.Controls.Add(label8, 2, 3);
-            tlpFormulario.Controls.Add(txtPrecio, 2, 4);
-            tlpFormulario.Controls.Add(label7, 0, 5);
-            tlpFormulario.Controls.Add(panel1, 2, 7);
-            tlpFormulario.Controls.Add(txtTipo, 1, 4);
+            tlpFormulario.Controls.Add(label7, 2, 4);
+            tlpFormulario.Controls.Add(cmbPaquete, 1, 4);
+            tlpFormulario.Controls.Add(label8, 1, 3);
+            tlpFormulario.Controls.Add(panel1, 2, 6);
             tlpFormulario.Dock = DockStyle.Bottom;
             tlpFormulario.Location = new Point(0, 268);
             tlpFormulario.Name = "tlpFormulario";
             tlpFormulario.Padding = new Padding(20);
-            tlpFormulario.RowCount = 8;
-            tlpFormulario.RowStyles.Add(new RowStyle(SizeType.Percent, 44.2622948F));
-            tlpFormulario.RowStyles.Add(new RowStyle(SizeType.Percent, 55.7377052F));
-            tlpFormulario.RowStyles.Add(new RowStyle(SizeType.Absolute, 40F));
-            tlpFormulario.RowStyles.Add(new RowStyle(SizeType.Absolute, 26F));
+            tlpFormulario.RowCount = 7;
+            tlpFormulario.RowStyles.Add(new RowStyle(SizeType.Percent, 52.38095F));
+            tlpFormulario.RowStyles.Add(new RowStyle(SizeType.Percent, 47.61905F));
+            tlpFormulario.RowStyles.Add(new RowStyle(SizeType.Absolute, 47F));
+            tlpFormulario.RowStyles.Add(new RowStyle(SizeType.Absolute, 27F));
             tlpFormulario.RowStyles.Add(new RowStyle(SizeType.Absolute, 41F));
-            tlpFormulario.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            tlpFormulario.RowStyles.Add(new RowStyle(SizeType.Absolute, 36F));
-            tlpFormulario.RowStyles.Add(new RowStyle(SizeType.Absolute, 57F));
+            tlpFormulario.RowStyles.Add(new RowStyle(SizeType.Absolute, 23F));
+            tlpFormulario.RowStyles.Add(new RowStyle(SizeType.Absolute, 71F));
             tlpFormulario.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
             tlpFormulario.Size = new Size(930, 313);
             tlpFormulario.TabIndex = 18;
@@ -320,7 +258,7 @@
             cmbCliente.Anchor = AnchorStyles.Left | AnchorStyles.Right;
             cmbCliente.Font = new Font("Segoe UI", 9.5F);
             cmbCliente.FormattingEnabled = true;
-            cmbCliente.Location = new Point(23, 77);
+            cmbCliente.Location = new Point(23, 92);
             cmbCliente.Name = "cmbCliente";
             cmbCliente.Size = new Size(290, 29);
             cmbCliente.TabIndex = 28;
@@ -331,7 +269,7 @@
             dtpFecha.CalendarTitleBackColor = Color.CornflowerBlue;
             tlpFormulario.SetColumnSpan(dtpFecha, 2);
             dtpFecha.Font = new Font("Segoe UI", 9.5F);
-            dtpFecha.Location = new Point(161, 202);
+            dtpFecha.Location = new Point(161, 242);
             dtpFecha.Name = "dtpFecha";
             dtpFecha.Size = new Size(310, 29);
             dtpFecha.TabIndex = 39;
@@ -341,7 +279,7 @@
             label3.Anchor = AnchorStyles.None;
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 10.2F);
-            label3.Location = new Point(136, 46);
+            label3.Location = new Point(136, 56);
             label3.Name = "label3";
             label3.Size = new Size(63, 23);
             label3.TabIndex = 29;
@@ -352,7 +290,7 @@
             cmbFotografo.Anchor = AnchorStyles.Left | AnchorStyles.Right;
             cmbFotografo.Font = new Font("Segoe UI", 9.5F);
             cmbFotografo.FormattingEnabled = true;
-            cmbFotografo.Location = new Point(319, 77);
+            cmbFotografo.Location = new Point(319, 92);
             cmbFotografo.Name = "cmbFotografo";
             cmbFotografo.Size = new Size(290, 29);
             cmbFotografo.TabIndex = 36;
@@ -363,7 +301,7 @@
             cmbEstado.Font = new Font("Segoe UI", 9.5F);
             cmbEstado.FormattingEnabled = true;
             cmbEstado.Items.AddRange(new object[] { "Todos los estados", "Pendiente", "Confirmada", "Cancelada", "Completada" });
-            cmbEstado.Location = new Point(615, 77);
+            cmbEstado.Location = new Point(615, 92);
             cmbEstado.Name = "cmbEstado";
             cmbEstado.Size = new Size(292, 29);
             cmbEstado.TabIndex = 38;
@@ -373,7 +311,7 @@
             label4.Anchor = AnchorStyles.None;
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 10.2F);
-            label4.Location = new Point(422, 46);
+            label4.Location = new Point(422, 56);
             label4.Name = "label4";
             label4.Size = new Size(84, 23);
             label4.TabIndex = 30;
@@ -384,7 +322,7 @@
             label9.Anchor = AnchorStyles.None;
             label9.AutoSize = true;
             label9.Font = new Font("Segoe UI", 10.2F);
-            label9.Location = new Point(730, 46);
+            label9.Location = new Point(730, 56);
             label9.Name = "label9";
             label9.Size = new Size(61, 23);
             label9.TabIndex = 35;
@@ -395,7 +333,7 @@
             label5.Anchor = AnchorStyles.None;
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 10.2F);
-            label5.Location = new Point(99, 113);
+            label5.Location = new Point(99, 132);
             label5.Name = "label5";
             label5.Size = new Size(138, 23);
             label5.TabIndex = 31;
@@ -405,7 +343,7 @@
             // 
             nmdHora.Anchor = AnchorStyles.Left | AnchorStyles.Right;
             nmdHora.Font = new Font("Segoe UI", 9.5F);
-            nmdHora.Location = new Point(23, 144);
+            nmdHora.Location = new Point(23, 163);
             nmdHora.Maximum = new decimal(new int[] { 12, 0, 0, 0 });
             nmdHora.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
             nmdHora.Name = "nmdHora";
@@ -414,36 +352,16 @@
             nmdHora.TextAlign = HorizontalAlignment.Center;
             nmdHora.Value = new decimal(new int[] { 1, 0, 0, 0 });
             // 
-            // label6
-            // 
-            label6.Anchor = AnchorStyles.None;
-            label6.AutoSize = true;
-            label6.Font = new Font("Segoe UI", 10.2F);
-            label6.Location = new Point(404, 113);
-            label6.Name = "label6";
-            label6.Size = new Size(119, 23);
-            label6.TabIndex = 32;
-            label6.Text = "Tipo de sesión";
-            // 
             // label8
             // 
             label8.Anchor = AnchorStyles.None;
             label8.AutoSize = true;
             label8.Font = new Font("Segoe UI", 10.2F);
-            label8.Location = new Point(685, 113);
+            label8.Location = new Point(428, 132);
             label8.Name = "label8";
-            label8.Size = new Size(152, 23);
+            label8.Size = new Size(72, 23);
             label8.TabIndex = 34;
-            label8.Text = "Precio del Paquete";
-            // 
-            // txtPrecio
-            // 
-            txtPrecio.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            txtPrecio.Font = new Font("Segoe UI", 9.5F);
-            txtPrecio.Location = new Point(615, 144);
-            txtPrecio.Name = "txtPrecio";
-            txtPrecio.Size = new Size(292, 29);
-            txtPrecio.TabIndex = 41;
+            label8.Text = "Paquete";
             // 
             // label7
             // 
@@ -451,9 +369,9 @@
             label7.AutoSize = true;
             tlpFormulario.SetColumnSpan(label7, 2);
             label7.Font = new Font("Segoe UI", 10.2F);
-            label7.Location = new Point(289, 179);
+            label7.Location = new Point(289, 198);
             label7.Name = "label7";
-            label7.Size = new Size(54, 20);
+            label7.Size = new Size(54, 23);
             label7.TabIndex = 33;
             label7.Text = "Fecha";
             // 
@@ -461,7 +379,7 @@
             // 
             panel1.Controls.Add(btnCancelar);
             panel1.Controls.Add(btnGuardar);
-            panel1.Location = new Point(615, 238);
+            panel1.Location = new Point(615, 224);
             panel1.Name = "panel1";
             panel1.Size = new Size(292, 52);
             panel1.TabIndex = 42;
@@ -494,13 +412,63 @@
             btnGuardar.UseVisualStyleBackColor = false;
             btnGuardar.Click += btnGuardar_Click;
             // 
-            // txtTipo
+            // cmbPaquete
             // 
-            txtTipo.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            txtTipo.Location = new Point(319, 145);
-            txtTipo.Name = "txtTipo";
-            txtTipo.Size = new Size(290, 27);
-            txtTipo.TabIndex = 43;
+            cmbPaquete.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            cmbPaquete.FormattingEnabled = true;
+            cmbPaquete.Location = new Point(319, 160);
+            cmbPaquete.Name = "cmbPaquete";
+            cmbPaquete.Size = new Size(290, 28);
+            cmbPaquete.TabIndex = 43;
+            // 
+            // id
+            // 
+            id.HeaderText = "ID";
+            id.MinimumWidth = 6;
+            id.Name = "id";
+            id.ReadOnly = true;
+            // 
+            // fecha
+            // 
+            fecha.HeaderText = "Fecha";
+            fecha.MinimumWidth = 6;
+            fecha.Name = "fecha";
+            fecha.ReadOnly = true;
+            // 
+            // horas
+            // 
+            horas.HeaderText = "Horas";
+            horas.MinimumWidth = 6;
+            horas.Name = "horas";
+            horas.ReadOnly = true;
+            // 
+            // estado
+            // 
+            estado.HeaderText = "Estado";
+            estado.MinimumWidth = 6;
+            estado.Name = "estado";
+            estado.ReadOnly = true;
+            // 
+            // cliente
+            // 
+            cliente.HeaderText = "Cliente";
+            cliente.MinimumWidth = 6;
+            cliente.Name = "cliente";
+            cliente.ReadOnly = true;
+            // 
+            // fotografo
+            // 
+            fotografo.HeaderText = "Fotógrafo";
+            fotografo.MinimumWidth = 6;
+            fotografo.Name = "fotografo";
+            fotografo.ReadOnly = true;
+            // 
+            // paquete
+            // 
+            paquete.HeaderText = "Paquete";
+            paquete.MinimumWidth = 6;
+            paquete.Name = "paquete";
+            paquete.ReadOnly = true;
             // 
             // UC_Sesiones
             // 
@@ -533,14 +501,6 @@
         private TableLayoutPanel tableLayoutPanel1;
         private Label label1;
         private DataGridView dgvSesiones;
-        private DataGridViewTextBoxColumn id;
-        private DataGridViewTextBoxColumn fecha;
-        private DataGridViewTextBoxColumn tipo;
-        private DataGridViewTextBoxColumn cliente;
-        private DataGridViewTextBoxColumn fotografo;
-        private DataGridViewTextBoxColumn horas;
-        private DataGridViewTextBoxColumn precio;
-        private DataGridViewTextBoxColumn estado;
         private Label label2;
         private TableLayoutPanel tlpFormulario;
         private ComboBox cmbCliente;
@@ -552,13 +512,18 @@
         private NumericUpDown nmdHora;
         private Label label7;
         private Label label4;
-        private Label label6;
-        private TextBox txtPrecio;
         private Label label9;
         private ComboBox cmbFotografo;
         private Panel panel1;
         private Button btnCancelar;
         private Button btnGuardar;
-        private TextBox txtTipo;
+        private DataGridViewTextBoxColumn id;
+        private DataGridViewTextBoxColumn fecha;
+        private DataGridViewTextBoxColumn horas;
+        private DataGridViewTextBoxColumn estado;
+        private DataGridViewTextBoxColumn cliente;
+        private DataGridViewTextBoxColumn fotografo;
+        private DataGridViewTextBoxColumn paquete;
+        private ComboBox cmbPaquete;
     }
 }

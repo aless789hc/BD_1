@@ -10,9 +10,16 @@ namespace BD_1
 {
     public partial class UC_Gestion : UserControl
     {
+        private bool mostrandoPwd = false;
         public UC_Gestion()
         {
             InitializeComponent();
+        }
+
+        private void btnMostrarNueva_Click(object sender, EventArgs e)
+        {
+            mostrandoPwd = !mostrandoPwd;
+            txtPwd.PasswordChar = mostrandoPwd ? '\0' : '*';
         }
     }
 }
