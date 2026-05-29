@@ -13,6 +13,7 @@ namespace BD_1
         public UC_Paquete()
         {
             InitializeComponent();
+            tlpFormulario.Visible = false;
         }
         private void LimpiarFormulario()
         {

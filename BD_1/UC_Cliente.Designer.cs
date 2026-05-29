@@ -31,10 +31,6 @@
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             dgvClientes = new DataGridView();
-            id = new DataGridViewTextBoxColumn();
-            cli_nombre_completo = new DataGridViewTextBoxColumn();
-            telefono = new DataGridViewTextBoxColumn();
-            email = new DataGridViewTextBoxColumn();
             tableLayoutPanel2 = new TableLayoutPanel();
             txtBuscar = new TextBox();
             btnBuscar = new Button();
@@ -69,6 +65,11 @@
             txtFechaC = new TextBox();
             label10 = new Label();
             label7 = new Label();
+            id = new DataGridViewTextBoxColumn();
+            cli_nombre_completo = new DataGridViewTextBoxColumn();
+            telefono = new DataGridViewTextBoxColumn();
+            email = new DataGridViewTextBoxColumn();
+            cli_fecha_registro = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)dgvClientes).BeginInit();
             tableLayoutPanel2.SuspendLayout();
             tableLayoutPanel1.SuspendLayout();
@@ -93,7 +94,7 @@
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
             dgvClientes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dgvClientes.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvClientes.Columns.AddRange(new DataGridViewColumn[] { id, cli_nombre_completo, telefono, email });
+            dgvClientes.Columns.AddRange(new DataGridViewColumn[] { id, cli_nombre_completo, telefono, email, cli_fecha_registro });
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = SystemColors.Window;
             dataGridViewCellStyle2.Font = new Font("Segoe UI", 9.5F);
@@ -111,34 +112,6 @@
             dgvClientes.RowHeadersWidth = 51;
             dgvClientes.Size = new Size(938, 520);
             dgvClientes.TabIndex = 9;
-            // 
-            // id
-            // 
-            id.FillWeight = 68.4491959F;
-            id.HeaderText = "ID";
-            id.MinimumWidth = 6;
-            id.Name = "id";
-            // 
-            // cli_nombre_completo
-            // 
-            cli_nombre_completo.FillWeight = 112.506271F;
-            cli_nombre_completo.HeaderText = "Nombre Completo";
-            cli_nombre_completo.MinimumWidth = 6;
-            cli_nombre_completo.Name = "cli_nombre_completo";
-            // 
-            // telefono
-            // 
-            telefono.FillWeight = 88.42706F;
-            telefono.HeaderText = "Teléfono";
-            telefono.MinimumWidth = 6;
-            telefono.Name = "telefono";
-            // 
-            // email
-            // 
-            email.FillWeight = 86.12268F;
-            email.HeaderText = "Email";
-            email.MinimumWidth = 6;
-            email.Name = "email";
             // 
             // tableLayoutPanel2
             // 
@@ -594,6 +567,40 @@
             label7.TabIndex = 17;
             label7.Text = "Creado por:";
             // 
+            // id
+            // 
+            id.FillWeight = 68.4491959F;
+            id.HeaderText = "ID";
+            id.MinimumWidth = 6;
+            id.Name = "id";
+            // 
+            // cli_nombre_completo
+            // 
+            cli_nombre_completo.FillWeight = 112.506271F;
+            cli_nombre_completo.HeaderText = "Nombre Completo";
+            cli_nombre_completo.MinimumWidth = 6;
+            cli_nombre_completo.Name = "cli_nombre_completo";
+            // 
+            // telefono
+            // 
+            telefono.FillWeight = 88.42706F;
+            telefono.HeaderText = "Teléfono";
+            telefono.MinimumWidth = 6;
+            telefono.Name = "telefono";
+            // 
+            // email
+            // 
+            email.FillWeight = 86.12268F;
+            email.HeaderText = "Email";
+            email.MinimumWidth = 6;
+            email.Name = "email";
+            // 
+            // cli_fecha_registro
+            // 
+            cli_fecha_registro.HeaderText = "Fecha registro";
+            cli_fecha_registro.MinimumWidth = 6;
+            cli_fecha_registro.Name = "cli_fecha_registro";
+            // 
             // UC_Cliente
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -644,10 +651,6 @@
         private Panel panel1;
         private Button btnCancelar;
         private Button btnGuardar;
-        private DataGridViewTextBoxColumn id;
-        private DataGridViewTextBoxColumn cli_nombre_completo;
-        private DataGridViewTextBoxColumn telefono;
-        private DataGridViewTextBoxColumn email;
         private TableLayoutPanel tableLayoutPanel4;
         private TextBox txtCreado;
         private TextBox txtMotificado;
@@ -659,5 +662,10 @@
         private Label label7;
         private Label label2;
         private Label label12;
+        private DataGridViewTextBoxColumn id;
+        private DataGridViewTextBoxColumn cli_nombre_completo;
+        private DataGridViewTextBoxColumn telefono;
+        private DataGridViewTextBoxColumn email;
+        private DataGridViewTextBoxColumn cli_fecha_registro;
     }
 }

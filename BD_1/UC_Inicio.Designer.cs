@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle9 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle10 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle11 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle12 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
             tableLayoutPanel1 = new TableLayoutPanel();
             panel8 = new Panel();
             btnCancelar = new Button();
@@ -41,26 +41,23 @@
             tableLayoutPanel3 = new TableLayoutPanel();
             panel7 = new Panel();
             label1 = new Label();
-            dgvPedidos = new DataGridView();
-            nomCli = new DataGridViewTextBoxColumn();
-            formato = new DataGridViewTextBoxColumn();
-            cantidad = new DataGridViewTextBoxColumn();
-            entrega = new DataGridViewTextBoxColumn();
+            dgvPedidosPendientes = new DataGridView();
             tableLayoutPanel2 = new TableLayoutPanel();
             tableLayoutPanel5 = new TableLayoutPanel();
+            dgvSesionesRecientes = new DataGridView();
+            v2_ID = new DataGridViewTextBoxColumn();
+            v2_Fecha = new DataGridViewTextBoxColumn();
+            v2_Cliente = new DataGridViewTextBoxColumn();
+            v2_Estado = new DataGridViewTextBoxColumn();
             panel5 = new Panel();
             label11 = new Label();
-            dgvSesiones = new DataGridView();
-            nomCliente = new DataGridViewTextBoxColumn();
-            fechaC = new DataGridViewTextBoxColumn();
-            tipoCl = new DataGridViewTextBoxColumn();
-            estado = new DataGridViewTextBoxColumn();
             tableLayoutPanel6 = new TableLayoutPanel();
+            dgvFotografos = new DataGridView();
+            v_Fotografo = new DataGridViewTextBoxColumn();
+            v_Especialidad = new DataGridViewTextBoxColumn();
+            v_Tot = new DataGridViewTextBoxColumn();
             panel6 = new Panel();
             label13 = new Label();
-            dgvFotografos = new DataGridView();
-            nomFoto = new DataGridViewTextBoxColumn();
-            sesiones = new DataGridViewTextBoxColumn();
             tableLayoutPanel4 = new TableLayoutPanel();
             panel1 = new Panel();
             lblSesiones = new Label();
@@ -75,18 +72,24 @@
             panel4 = new Panel();
             lblIngresos = new Label();
             label9 = new Label();
+            nomCli = new DataGridViewTextBoxColumn();
+            telefono = new DataGridViewTextBoxColumn();
+            paquete = new DataGridViewTextBoxColumn();
+            formato = new DataGridViewTextBoxColumn();
+            cantidad = new DataGridViewTextBoxColumn();
+            fecha_entrega = new DataGridViewTextBoxColumn();
             tableLayoutPanel1.SuspendLayout();
             panel8.SuspendLayout();
             tableLayoutPanel3.SuspendLayout();
             panel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dgvPedidos).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvPedidosPendientes).BeginInit();
             tableLayoutPanel2.SuspendLayout();
             tableLayoutPanel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvSesionesRecientes).BeginInit();
             panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dgvSesiones).BeginInit();
             tableLayoutPanel6.SuspendLayout();
-            panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvFotografos).BeginInit();
+            panel6.SuspendLayout();
             tableLayoutPanel4.SuspendLayout();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
@@ -156,7 +159,7 @@
             tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
             tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 20F));
             tableLayoutPanel3.Controls.Add(panel7, 0, 0);
-            tableLayoutPanel3.Controls.Add(dgvPedidos, 0, 1);
+            tableLayoutPanel3.Controls.Add(dgvPedidosPendientes, 0, 1);
             tableLayoutPanel3.Dock = DockStyle.Fill;
             tableLayoutPanel3.Location = new Point(3, 375);
             tableLayoutPanel3.Name = "tableLayoutPanel3";
@@ -186,71 +189,43 @@
             label1.ForeColor = Color.White;
             label1.Location = new Point(484, 4);
             label1.Name = "label1";
-            label1.Size = new Size(156, 25);
+            label1.Size = new Size(185, 25);
             label1.TabIndex = 1;
-            label1.Text = "Últimos pedidos";
+            label1.Text = "Pedidos pendientes";
             // 
-            // dgvPedidos
+            // dgvPedidosPendientes
             // 
-            dgvPedidos.AllowUserToAddRows = false;
-            dgvPedidos.AllowUserToDeleteRows = false;
-            dgvPedidos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgvPedidos.BackgroundColor = Color.White;
-            dataGridViewCellStyle7.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = SystemColors.Control;
-            dataGridViewCellStyle7.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle7.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = DataGridViewTriState.True;
-            dgvPedidos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
-            dgvPedidos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvPedidos.Columns.AddRange(new DataGridViewColumn[] { nomCli, formato, cantidad, entrega });
-            dataGridViewCellStyle8.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = SystemColors.Window;
-            dataGridViewCellStyle8.Font = new Font("Segoe UI", 9.5F);
-            dataGridViewCellStyle8.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle8.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = DataGridViewTriState.False;
-            dgvPedidos.DefaultCellStyle = dataGridViewCellStyle8;
-            dgvPedidos.Dock = DockStyle.Fill;
-            dgvPedidos.GridColor = Color.FromArgb(227, 230, 245);
-            dgvPedidos.Location = new Point(3, 43);
-            dgvPedidos.Name = "dgvPedidos";
-            dgvPedidos.ReadOnly = true;
-            dgvPedidos.RowHeadersVisible = false;
-            dgvPedidos.RowHeadersWidth = 51;
-            dgvPedidos.Size = new Size(1138, 184);
-            dgvPedidos.TabIndex = 4;
-            // 
-            // nomCli
-            // 
-            nomCli.HeaderText = "Cliente";
-            nomCli.MinimumWidth = 6;
-            nomCli.Name = "nomCli";
-            nomCli.ReadOnly = true;
-            // 
-            // formato
-            // 
-            formato.HeaderText = "Formato";
-            formato.MinimumWidth = 6;
-            formato.Name = "formato";
-            formato.ReadOnly = true;
-            // 
-            // cantidad
-            // 
-            cantidad.HeaderText = "Cantidad";
-            cantidad.MinimumWidth = 6;
-            cantidad.Name = "cantidad";
-            cantidad.ReadOnly = true;
-            // 
-            // entrega
-            // 
-            entrega.HeaderText = "Entrega";
-            entrega.MinimumWidth = 6;
-            entrega.Name = "entrega";
-            entrega.ReadOnly = true;
+            dgvPedidosPendientes.AllowUserToAddRows = false;
+            dgvPedidosPendientes.AllowUserToDeleteRows = false;
+            dgvPedidosPendientes.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvPedidosPendientes.BackgroundColor = Color.White;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = SystemColors.Control;
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dgvPedidosPendientes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dgvPedidosPendientes.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvPedidosPendientes.Columns.AddRange(new DataGridViewColumn[] { nomCli, telefono, paquete, formato, cantidad, fecha_entrega });
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = SystemColors.Window;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9.5F);
+            dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            dgvPedidosPendientes.DefaultCellStyle = dataGridViewCellStyle2;
+            dgvPedidosPendientes.Dock = DockStyle.Fill;
+            dgvPedidosPendientes.GridColor = Color.FromArgb(227, 230, 245);
+            dgvPedidosPendientes.Location = new Point(3, 43);
+            dgvPedidosPendientes.Name = "dgvPedidosPendientes";
+            dgvPedidosPendientes.ReadOnly = true;
+            dgvPedidosPendientes.RowHeadersVisible = false;
+            dgvPedidosPendientes.RowHeadersWidth = 51;
+            dgvPedidosPendientes.Size = new Size(1138, 184);
+            dgvPedidosPendientes.TabIndex = 4;
             // 
             // tableLayoutPanel2
             // 
@@ -271,8 +246,8 @@
             // 
             tableLayoutPanel5.ColumnCount = 1;
             tableLayoutPanel5.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+            tableLayoutPanel5.Controls.Add(dgvSesionesRecientes, 0, 1);
             tableLayoutPanel5.Controls.Add(panel5, 0, 0);
-            tableLayoutPanel5.Controls.Add(dgvSesiones, 0, 1);
             tableLayoutPanel5.Dock = DockStyle.Fill;
             tableLayoutPanel5.Location = new Point(3, 3);
             tableLayoutPanel5.Name = "tableLayoutPanel5";
@@ -311,6 +286,68 @@
             tableLayoutPanel5.Size = new Size(566, 214);
             tableLayoutPanel5.TabIndex = 2;
             // 
+            // dgvSesionesRecientes
+            // 
+            dgvSesionesRecientes.AllowUserToAddRows = false;
+            dgvSesionesRecientes.AllowUserToDeleteRows = false;
+            dgvSesionesRecientes.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvSesionesRecientes.BackgroundColor = Color.White;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = SystemColors.Control;
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle3.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
+            dgvSesionesRecientes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dgvSesionesRecientes.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvSesionesRecientes.Columns.AddRange(new DataGridViewColumn[] { v2_ID, v2_Fecha, v2_Cliente, v2_Estado });
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = SystemColors.Window;
+            dataGridViewCellStyle4.Font = new Font("Segoe UI", 9.5F);
+            dataGridViewCellStyle4.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.False;
+            dgvSesionesRecientes.DefaultCellStyle = dataGridViewCellStyle4;
+            dgvSesionesRecientes.Dock = DockStyle.Fill;
+            dgvSesionesRecientes.GridColor = Color.FromArgb(227, 230, 245);
+            dgvSesionesRecientes.Location = new Point(3, 43);
+            dgvSesionesRecientes.Name = "dgvSesionesRecientes";
+            dgvSesionesRecientes.ReadOnly = true;
+            dgvSesionesRecientes.RowHeadersVisible = false;
+            dgvSesionesRecientes.RowHeadersWidth = 51;
+            dgvSesionesRecientes.Size = new Size(560, 168);
+            dgvSesionesRecientes.TabIndex = 30;
+            // 
+            // v2_ID
+            // 
+            v2_ID.HeaderText = "ID Sesión";
+            v2_ID.MinimumWidth = 6;
+            v2_ID.Name = "v2_ID";
+            v2_ID.ReadOnly = true;
+            // 
+            // v2_Fecha
+            // 
+            v2_Fecha.HeaderText = "Fecha";
+            v2_Fecha.MinimumWidth = 6;
+            v2_Fecha.Name = "v2_Fecha";
+            v2_Fecha.ReadOnly = true;
+            // 
+            // v2_Cliente
+            // 
+            v2_Cliente.HeaderText = "Cliente";
+            v2_Cliente.MinimumWidth = 6;
+            v2_Cliente.Name = "v2_Cliente";
+            v2_Cliente.ReadOnly = true;
+            // 
+            // v2_Estado
+            // 
+            v2_Estado.HeaderText = "Estado";
+            v2_Estado.MinimumWidth = 6;
+            v2_Estado.Name = "v2_Estado";
+            v2_Estado.ReadOnly = true;
+            // 
             // panel5
             // 
             panel5.BackColor = Color.FromArgb(50, 13, 162);
@@ -331,78 +368,16 @@
             label11.ForeColor = Color.White;
             label11.Location = new Point(190, 4);
             label11.Name = "label11";
-            label11.Size = new Size(178, 25);
+            label11.Size = new Size(172, 25);
             label11.TabIndex = 1;
-            label11.Text = " Próximas sesiones";
-            // 
-            // dgvSesiones
-            // 
-            dgvSesiones.AllowUserToAddRows = false;
-            dgvSesiones.AllowUserToDeleteRows = false;
-            dgvSesiones.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgvSesiones.BackgroundColor = SystemColors.ControlLightLight;
-            dataGridViewCellStyle9.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = SystemColors.Control;
-            dataGridViewCellStyle9.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle9.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle9.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = DataGridViewTriState.True;
-            dgvSesiones.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
-            dgvSesiones.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvSesiones.Columns.AddRange(new DataGridViewColumn[] { nomCliente, fechaC, tipoCl, estado });
-            dataGridViewCellStyle10.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = SystemColors.Window;
-            dataGridViewCellStyle10.Font = new Font("Segoe UI", 9.5F);
-            dataGridViewCellStyle10.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle10.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle10.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = DataGridViewTriState.False;
-            dgvSesiones.DefaultCellStyle = dataGridViewCellStyle10;
-            dgvSesiones.Dock = DockStyle.Fill;
-            dgvSesiones.GridColor = Color.FromArgb(227, 230, 245);
-            dgvSesiones.Location = new Point(3, 43);
-            dgvSesiones.Name = "dgvSesiones";
-            dgvSesiones.ReadOnly = true;
-            dgvSesiones.RowHeadersVisible = false;
-            dgvSesiones.RowHeadersWidth = 51;
-            dgvSesiones.Size = new Size(560, 168);
-            dgvSesiones.TabIndex = 2;
-            // 
-            // nomCliente
-            // 
-            nomCliente.HeaderText = "Nombre";
-            nomCliente.MinimumWidth = 6;
-            nomCliente.Name = "nomCliente";
-            nomCliente.ReadOnly = true;
-            // 
-            // fechaC
-            // 
-            fechaC.HeaderText = "Fecha";
-            fechaC.MinimumWidth = 6;
-            fechaC.Name = "fechaC";
-            fechaC.ReadOnly = true;
-            // 
-            // tipoCl
-            // 
-            tipoCl.HeaderText = "Tipo";
-            tipoCl.MinimumWidth = 6;
-            tipoCl.Name = "tipoCl";
-            tipoCl.ReadOnly = true;
-            // 
-            // estado
-            // 
-            estado.HeaderText = "Estado";
-            estado.MinimumWidth = 6;
-            estado.Name = "estado";
-            estado.ReadOnly = true;
+            label11.Text = "Sesiones recientes";
             // 
             // tableLayoutPanel6
             // 
             tableLayoutPanel6.ColumnCount = 1;
             tableLayoutPanel6.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
-            tableLayoutPanel6.Controls.Add(panel6, 0, 0);
             tableLayoutPanel6.Controls.Add(dgvFotografos, 0, 1);
+            tableLayoutPanel6.Controls.Add(panel6, 0, 0);
             tableLayoutPanel6.Dock = DockStyle.Fill;
             tableLayoutPanel6.Location = new Point(575, 3);
             tableLayoutPanel6.Name = "tableLayoutPanel6";
@@ -411,6 +386,64 @@
             tableLayoutPanel6.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
             tableLayoutPanel6.Size = new Size(566, 214);
             tableLayoutPanel6.TabIndex = 3;
+            // 
+            // dgvFotografos
+            // 
+            dgvFotografos.AllowUserToAddRows = false;
+            dgvFotografos.AllowUserToDeleteRows = false;
+            dgvFotografos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvFotografos.BackgroundColor = Color.White;
+            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = SystemColors.Control;
+            dataGridViewCellStyle5.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle5.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.True;
+            dgvFotografos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dgvFotografos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvFotografos.Columns.AddRange(new DataGridViewColumn[] { v_Fotografo, v_Especialidad, v_Tot });
+            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = SystemColors.Window;
+            dataGridViewCellStyle6.Font = new Font("Segoe UI", 9.5F);
+            dataGridViewCellStyle6.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.False;
+            dgvFotografos.DefaultCellStyle = dataGridViewCellStyle6;
+            dgvFotografos.Dock = DockStyle.Fill;
+            dgvFotografos.GridColor = Color.FromArgb(227, 230, 245);
+            dgvFotografos.Location = new Point(3, 43);
+            dgvFotografos.Name = "dgvFotografos";
+            dgvFotografos.ReadOnly = true;
+            dgvFotografos.RowHeadersVisible = false;
+            dgvFotografos.RowHeadersWidth = 51;
+            dgvFotografos.Size = new Size(560, 168);
+            dgvFotografos.TabIndex = 21;
+            // 
+            // v_Fotografo
+            // 
+            v_Fotografo.FillWeight = 112.506271F;
+            v_Fotografo.HeaderText = "Fotógrafo";
+            v_Fotografo.MinimumWidth = 6;
+            v_Fotografo.Name = "v_Fotografo";
+            v_Fotografo.ReadOnly = true;
+            // 
+            // v_Especialidad
+            // 
+            v_Especialidad.FillWeight = 86.12268F;
+            v_Especialidad.HeaderText = "Especialidad";
+            v_Especialidad.MinimumWidth = 6;
+            v_Especialidad.Name = "v_Especialidad";
+            v_Especialidad.ReadOnly = true;
+            // 
+            // v_Tot
+            // 
+            v_Tot.FillWeight = 88.42706F;
+            v_Tot.HeaderText = "Total de sesiones";
+            v_Tot.MinimumWidth = 6;
+            v_Tot.Name = "v_Tot";
+            v_Tot.ReadOnly = true;
             // 
             // panel6
             // 
@@ -430,59 +463,11 @@
             label13.FlatStyle = FlatStyle.Popup;
             label13.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
             label13.ForeColor = Color.White;
-            label13.Location = new Point(192, 4);
+            label13.Location = new Point(166, 4);
             label13.Name = "label13";
-            label13.Size = new Size(176, 25);
+            label13.Size = new Size(266, 25);
             label13.TabIndex = 1;
-            label13.Text = "Fotógrafos activos";
-            // 
-            // dgvFotografos
-            // 
-            dgvFotografos.AllowUserToAddRows = false;
-            dgvFotografos.AllowUserToDeleteRows = false;
-            dgvFotografos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgvFotografos.BackgroundColor = Color.White;
-            dataGridViewCellStyle11.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = SystemColors.Control;
-            dataGridViewCellStyle11.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle11.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle11.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = DataGridViewTriState.True;
-            dgvFotografos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
-            dgvFotografos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvFotografos.Columns.AddRange(new DataGridViewColumn[] { nomFoto, sesiones });
-            dataGridViewCellStyle12.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = SystemColors.Window;
-            dataGridViewCellStyle12.Font = new Font("Segoe UI", 9.5F);
-            dataGridViewCellStyle12.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle12.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle12.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle12.WrapMode = DataGridViewTriState.False;
-            dgvFotografos.DefaultCellStyle = dataGridViewCellStyle12;
-            dgvFotografos.Dock = DockStyle.Fill;
-            dgvFotografos.GridColor = Color.FromArgb(227, 230, 245);
-            dgvFotografos.Location = new Point(3, 43);
-            dgvFotografos.Name = "dgvFotografos";
-            dgvFotografos.ReadOnly = true;
-            dgvFotografos.RowHeadersVisible = false;
-            dgvFotografos.RowHeadersWidth = 51;
-            dgvFotografos.Size = new Size(560, 168);
-            dgvFotografos.TabIndex = 3;
-            // 
-            // nomFoto
-            // 
-            nomFoto.HeaderText = "Nombre";
-            nomFoto.MinimumWidth = 6;
-            nomFoto.Name = "nomFoto";
-            nomFoto.ReadOnly = true;
-            // 
-            // sesiones
-            // 
-            sesiones.HeaderText = "Sesiones pendientes";
-            sesiones.MinimumWidth = 6;
-            sesiones.Name = "sesiones";
-            sesiones.ReadOnly = true;
+            label13.Text = "Fotógrafos con más sesiones";
             // 
             // tableLayoutPanel4
             // 
@@ -647,6 +632,48 @@
             label9.Text = "Ingresos al mes";
             label9.TextAlign = ContentAlignment.MiddleCenter;
             // 
+            // nomCli
+            // 
+            nomCli.HeaderText = "Cliente";
+            nomCli.MinimumWidth = 6;
+            nomCli.Name = "nomCli";
+            nomCli.ReadOnly = true;
+            // 
+            // telefono
+            // 
+            telefono.HeaderText = "Teléfono";
+            telefono.MinimumWidth = 6;
+            telefono.Name = "telefono";
+            telefono.ReadOnly = true;
+            // 
+            // paquete
+            // 
+            paquete.HeaderText = "Paquete";
+            paquete.MinimumWidth = 6;
+            paquete.Name = "paquete";
+            paquete.ReadOnly = true;
+            // 
+            // formato
+            // 
+            formato.HeaderText = "Formato";
+            formato.MinimumWidth = 6;
+            formato.Name = "formato";
+            formato.ReadOnly = true;
+            // 
+            // cantidad
+            // 
+            cantidad.HeaderText = "Cantidad";
+            cantidad.MinimumWidth = 6;
+            cantidad.Name = "cantidad";
+            cantidad.ReadOnly = true;
+            // 
+            // fecha_entrega
+            // 
+            fecha_entrega.HeaderText = "Fecha entrega";
+            fecha_entrega.MinimumWidth = 6;
+            fecha_entrega.Name = "fecha_entrega";
+            fecha_entrega.ReadOnly = true;
+            // 
             // UC_Inicio
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -659,16 +686,16 @@
             tableLayoutPanel3.ResumeLayout(false);
             panel7.ResumeLayout(false);
             panel7.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dgvPedidos).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvPedidosPendientes).EndInit();
             tableLayoutPanel2.ResumeLayout(false);
             tableLayoutPanel5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dgvSesionesRecientes).EndInit();
             panel5.ResumeLayout(false);
             panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dgvSesiones).EndInit();
             tableLayoutPanel6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dgvFotografos).EndInit();
             panel6.ResumeLayout(false);
             panel6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dgvFotografos).EndInit();
             tableLayoutPanel4.ResumeLayout(false);
             panel1.ResumeLayout(false);
             panel2.ResumeLayout(false);
@@ -705,21 +732,24 @@
         private Label label13;
         private Panel panel7;
         private Label label1;
-        private DataGridView dgvSesiones;
-        private DataGridView dgvFotografos;
-        private DataGridViewTextBoxColumn nomCliente;
-        private DataGridViewTextBoxColumn fechaC;
-        private DataGridViewTextBoxColumn tipoCl;
-        private DataGridViewTextBoxColumn estado;
-        private DataGridViewTextBoxColumn nomFoto;
-        private DataGridViewTextBoxColumn sesiones;
-        private DataGridView dgvPedidos;
-        private DataGridViewTextBoxColumn nomCli;
-        private DataGridViewTextBoxColumn formato;
-        private DataGridViewTextBoxColumn cantidad;
-        private DataGridViewTextBoxColumn entrega;
+        private DataGridView dgvPedidosPendientes;
         private Panel panel8;
         private Button btnCancelar;
         private Button btnGuardar;
+        private DataGridView dgvSesionesRecientes;
+        private DataGridViewTextBoxColumn v2_ID;
+        private DataGridViewTextBoxColumn v2_Fecha;
+        private DataGridViewTextBoxColumn v2_Cliente;
+        private DataGridViewTextBoxColumn v2_Estado;
+        private DataGridView dgvFotografos;
+        private DataGridViewTextBoxColumn v_Fotografo;
+        private DataGridViewTextBoxColumn v_Especialidad;
+        private DataGridViewTextBoxColumn v_Tot;
+        private DataGridViewTextBoxColumn nomCli;
+        private DataGridViewTextBoxColumn telefono;
+        private DataGridViewTextBoxColumn paquete;
+        private DataGridViewTextBoxColumn formato;
+        private DataGridViewTextBoxColumn cantidad;
+        private DataGridViewTextBoxColumn fecha_entrega;
     }
 }
