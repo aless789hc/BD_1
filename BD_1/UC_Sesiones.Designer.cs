@@ -32,6 +32,8 @@
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
             tabControl1 = new TabControl();
             tabPage1 = new TabPage();
             dgvSesiones = new DataGridView();
@@ -68,14 +70,25 @@
             tableLayoutPanel1 = new TableLayoutPanel();
             label1 = new Label();
             tabPage2 = new TabPage();
-            dataGridView1 = new DataGridView();
+            tableLayoutPanel3 = new TableLayoutPanel();
+            panel2 = new Panel();
+            dgv_sesionesCompletadas = new DataGridView();
             v_Cliente = new DataGridViewTextBoxColumn();
             v_Fotografo = new DataGridViewTextBoxColumn();
             v_Fecha = new DataGridViewTextBoxColumn();
             v_Paquete = new DataGridViewTextBoxColumn();
             v_Estado = new DataGridViewTextBoxColumn();
-            tableLayoutPanel3 = new TableLayoutPanel();
+            tableLayoutPanel4 = new TableLayoutPanel();
             label6 = new Label();
+            panel3 = new Panel();
+            dgv_sesionesPremium = new DataGridView();
+            vC_fecha = new DataGridViewTextBoxColumn();
+            vC_cliente = new DataGridViewTextBoxColumn();
+            vC_fotografo = new DataGridViewTextBoxColumn();
+            vC_paquete = new DataGridViewTextBoxColumn();
+            vC_precioFinal = new DataGridViewTextBoxColumn();
+            tableLayoutPanel5 = new TableLayoutPanel();
+            label10 = new Label();
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvSesiones).BeginInit();
@@ -85,8 +98,13 @@
             tableLayoutPanel2.SuspendLayout();
             tableLayoutPanel1.SuspendLayout();
             tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             tableLayoutPanel3.SuspendLayout();
+            panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgv_sesionesCompletadas).BeginInit();
+            tableLayoutPanel4.SuspendLayout();
+            panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgv_sesionesPremium).BeginInit();
+            tableLayoutPanel5.SuspendLayout();
             SuspendLayout();
             // 
             // tabControl1
@@ -531,22 +549,46 @@
             // 
             // tabPage2
             // 
-            tabPage2.Controls.Add(dataGridView1);
             tabPage2.Controls.Add(tableLayoutPanel3);
             tabPage2.Location = new Point(4, 29);
             tabPage2.Name = "tabPage2";
             tabPage2.Padding = new Padding(3);
             tabPage2.Size = new Size(922, 548);
             tabPage2.TabIndex = 1;
-            tabPage2.Text = "Sesiones completadas";
+            tabPage2.Text = "Completadas";
             tabPage2.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // tableLayoutPanel3
             // 
-            dataGridView1.AllowUserToAddRows = false;
-            dataGridView1.AllowUserToDeleteRows = false;
-            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridView1.BackgroundColor = Color.White;
+            tableLayoutPanel3.ColumnCount = 1;
+            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+            tableLayoutPanel3.Controls.Add(panel2, 0, 0);
+            tableLayoutPanel3.Controls.Add(panel3, 0, 1);
+            tableLayoutPanel3.Dock = DockStyle.Fill;
+            tableLayoutPanel3.Location = new Point(3, 3);
+            tableLayoutPanel3.Name = "tableLayoutPanel3";
+            tableLayoutPanel3.RowCount = 2;
+            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+            tableLayoutPanel3.Size = new Size(916, 542);
+            tableLayoutPanel3.TabIndex = 0;
+            // 
+            // panel2
+            // 
+            panel2.Controls.Add(dgv_sesionesCompletadas);
+            panel2.Controls.Add(tableLayoutPanel4);
+            panel2.Dock = DockStyle.Fill;
+            panel2.Location = new Point(3, 3);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(910, 265);
+            panel2.TabIndex = 0;
+            // 
+            // dgv_sesionesCompletadas
+            // 
+            dgv_sesionesCompletadas.AllowUserToAddRows = false;
+            dgv_sesionesCompletadas.AllowUserToDeleteRows = false;
+            dgv_sesionesCompletadas.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgv_sesionesCompletadas.BackgroundColor = Color.White;
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = SystemColors.Control;
             dataGridViewCellStyle3.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
@@ -554,9 +596,9 @@
             dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
             dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
-            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { v_Cliente, v_Fotografo, v_Fecha, v_Paquete, v_Estado });
+            dgv_sesionesCompletadas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dgv_sesionesCompletadas.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgv_sesionesCompletadas.Columns.AddRange(new DataGridViewColumn[] { v_Cliente, v_Fotografo, v_Fecha, v_Paquete, v_Estado });
             dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = SystemColors.Window;
             dataGridViewCellStyle4.Font = new Font("Segoe UI", 9.5F);
@@ -564,16 +606,16 @@
             dataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight;
             dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle4.WrapMode = DataGridViewTriState.False;
-            dataGridView1.DefaultCellStyle = dataGridViewCellStyle4;
-            dataGridView1.Dock = DockStyle.Fill;
-            dataGridView1.GridColor = Color.FromArgb(227, 230, 245);
-            dataGridView1.Location = new Point(3, 60);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.ReadOnly = true;
-            dataGridView1.RowHeadersVisible = false;
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(916, 485);
-            dataGridView1.TabIndex = 28;
+            dgv_sesionesCompletadas.DefaultCellStyle = dataGridViewCellStyle4;
+            dgv_sesionesCompletadas.Dock = DockStyle.Fill;
+            dgv_sesionesCompletadas.GridColor = Color.FromArgb(227, 230, 245);
+            dgv_sesionesCompletadas.Location = new Point(0, 57);
+            dgv_sesionesCompletadas.Name = "dgv_sesionesCompletadas";
+            dgv_sesionesCompletadas.ReadOnly = true;
+            dgv_sesionesCompletadas.RowHeadersVisible = false;
+            dgv_sesionesCompletadas.RowHeadersWidth = 51;
+            dgv_sesionesCompletadas.Size = new Size(910, 208);
+            dgv_sesionesCompletadas.TabIndex = 30;
             // 
             // v_Cliente
             // 
@@ -610,19 +652,19 @@
             v_Estado.Name = "v_Estado";
             v_Estado.ReadOnly = true;
             // 
-            // tableLayoutPanel3
+            // tableLayoutPanel4
             // 
-            tableLayoutPanel3.BackColor = Color.FromArgb(50, 13, 162);
-            tableLayoutPanel3.ColumnCount = 1;
-            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tableLayoutPanel3.Controls.Add(label6, 0, 0);
-            tableLayoutPanel3.Dock = DockStyle.Top;
-            tableLayoutPanel3.Location = new Point(3, 3);
-            tableLayoutPanel3.Name = "tableLayoutPanel3";
-            tableLayoutPanel3.RowCount = 1;
-            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel3.Size = new Size(916, 57);
-            tableLayoutPanel3.TabIndex = 25;
+            tableLayoutPanel4.BackColor = Color.FromArgb(50, 13, 162);
+            tableLayoutPanel4.ColumnCount = 1;
+            tableLayoutPanel4.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tableLayoutPanel4.Controls.Add(label6, 0, 0);
+            tableLayoutPanel4.Dock = DockStyle.Top;
+            tableLayoutPanel4.Location = new Point(0, 0);
+            tableLayoutPanel4.Name = "tableLayoutPanel4";
+            tableLayoutPanel4.RowCount = 1;
+            tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+            tableLayoutPanel4.Size = new Size(910, 57);
+            tableLayoutPanel4.TabIndex = 29;
             // 
             // label6
             // 
@@ -630,12 +672,118 @@
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 13.2000008F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label6.ForeColor = Color.White;
-            label6.Location = new Point(332, 13);
+            label6.Location = new Point(329, 13);
             label6.Name = "label6";
             label6.Size = new Size(251, 31);
             label6.TabIndex = 11;
             label6.Text = "Sesiones Completadas";
             label6.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // panel3
+            // 
+            panel3.Controls.Add(dgv_sesionesPremium);
+            panel3.Controls.Add(tableLayoutPanel5);
+            panel3.Dock = DockStyle.Fill;
+            panel3.Location = new Point(3, 274);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(910, 265);
+            panel3.TabIndex = 1;
+            // 
+            // dgv_sesionesPremium
+            // 
+            dgv_sesionesPremium.AllowUserToAddRows = false;
+            dgv_sesionesPremium.AllowUserToDeleteRows = false;
+            dgv_sesionesPremium.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgv_sesionesPremium.BackgroundColor = Color.White;
+            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = SystemColors.Control;
+            dataGridViewCellStyle5.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle5.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.True;
+            dgv_sesionesPremium.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dgv_sesionesPremium.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgv_sesionesPremium.Columns.AddRange(new DataGridViewColumn[] { vC_fecha, vC_cliente, vC_fotografo, vC_paquete, vC_precioFinal });
+            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = SystemColors.Window;
+            dataGridViewCellStyle6.Font = new Font("Segoe UI", 9.5F);
+            dataGridViewCellStyle6.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.False;
+            dgv_sesionesPremium.DefaultCellStyle = dataGridViewCellStyle6;
+            dgv_sesionesPremium.Dock = DockStyle.Fill;
+            dgv_sesionesPremium.GridColor = Color.FromArgb(227, 230, 245);
+            dgv_sesionesPremium.Location = new Point(0, 57);
+            dgv_sesionesPremium.Name = "dgv_sesionesPremium";
+            dgv_sesionesPremium.ReadOnly = true;
+            dgv_sesionesPremium.RowHeadersVisible = false;
+            dgv_sesionesPremium.RowHeadersWidth = 51;
+            dgv_sesionesPremium.Size = new Size(910, 208);
+            dgv_sesionesPremium.TabIndex = 30;
+            // 
+            // vC_fecha
+            // 
+            vC_fecha.HeaderText = "Fecha";
+            vC_fecha.MinimumWidth = 6;
+            vC_fecha.Name = "vC_fecha";
+            vC_fecha.ReadOnly = true;
+            // 
+            // vC_cliente
+            // 
+            vC_cliente.HeaderText = "Cliente";
+            vC_cliente.MinimumWidth = 6;
+            vC_cliente.Name = "vC_cliente";
+            vC_cliente.ReadOnly = true;
+            // 
+            // vC_fotografo
+            // 
+            vC_fotografo.HeaderText = "Fotógrafo";
+            vC_fotografo.MinimumWidth = 6;
+            vC_fotografo.Name = "vC_fotografo";
+            vC_fotografo.ReadOnly = true;
+            // 
+            // vC_paquete
+            // 
+            vC_paquete.HeaderText = "Paquete";
+            vC_paquete.MinimumWidth = 6;
+            vC_paquete.Name = "vC_paquete";
+            vC_paquete.ReadOnly = true;
+            // 
+            // vC_precioFinal
+            // 
+            vC_precioFinal.HeaderText = "Precio final";
+            vC_precioFinal.MinimumWidth = 6;
+            vC_precioFinal.Name = "vC_precioFinal";
+            vC_precioFinal.ReadOnly = true;
+            // 
+            // tableLayoutPanel5
+            // 
+            tableLayoutPanel5.BackColor = Color.FromArgb(50, 13, 162);
+            tableLayoutPanel5.ColumnCount = 1;
+            tableLayoutPanel5.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tableLayoutPanel5.Controls.Add(label10, 0, 0);
+            tableLayoutPanel5.Dock = DockStyle.Top;
+            tableLayoutPanel5.Location = new Point(0, 0);
+            tableLayoutPanel5.Name = "tableLayoutPanel5";
+            tableLayoutPanel5.RowCount = 1;
+            tableLayoutPanel5.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+            tableLayoutPanel5.Size = new Size(910, 57);
+            tableLayoutPanel5.TabIndex = 29;
+            // 
+            // label10
+            // 
+            label10.Anchor = AnchorStyles.None;
+            label10.AutoSize = true;
+            label10.Font = new Font("Segoe UI", 13.2000008F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label10.ForeColor = Color.White;
+            label10.Location = new Point(350, 13);
+            label10.Name = "label10";
+            label10.Size = new Size(210, 31);
+            label10.TabIndex = 11;
+            label10.Text = "Sesiones Premium";
+            label10.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // UC_Sesiones
             // 
@@ -656,9 +804,15 @@
             tableLayoutPanel1.ResumeLayout(false);
             tableLayoutPanel1.PerformLayout();
             tabPage2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             tableLayoutPanel3.ResumeLayout(false);
-            tableLayoutPanel3.PerformLayout();
+            panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dgv_sesionesCompletadas).EndInit();
+            tableLayoutPanel4.ResumeLayout(false);
+            tableLayoutPanel4.PerformLayout();
+            panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dgv_sesionesPremium).EndInit();
+            tableLayoutPanel5.ResumeLayout(false);
+            tableLayoutPanel5.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -699,14 +853,25 @@
         private Button btnEditar;
         private TableLayoutPanel tableLayoutPanel1;
         private Label label1;
-        private TableLayoutPanel tableLayoutPanel3;
-        private Label label6;
         private Button btnBuscar;
-        private DataGridView dataGridView1;
+        private TableLayoutPanel tableLayoutPanel3;
+        private Panel panel2;
+        private DataGridView dgv_sesionesCompletadas;
         private DataGridViewTextBoxColumn v_Cliente;
         private DataGridViewTextBoxColumn v_Fotografo;
         private DataGridViewTextBoxColumn v_Fecha;
         private DataGridViewTextBoxColumn v_Paquete;
         private DataGridViewTextBoxColumn v_Estado;
+        private TableLayoutPanel tableLayoutPanel4;
+        private Label label6;
+        private Panel panel3;
+        private DataGridView dgv_sesionesPremium;
+        private DataGridViewTextBoxColumn vC_fecha;
+        private DataGridViewTextBoxColumn vC_cliente;
+        private DataGridViewTextBoxColumn vC_fotografo;
+        private DataGridViewTextBoxColumn vC_paquete;
+        private DataGridViewTextBoxColumn vC_precioFinal;
+        private TableLayoutPanel tableLayoutPanel5;
+        private Label label10;
     }
 }
